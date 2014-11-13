@@ -1,12 +1,12 @@
 // Fixture data. Refer to destinations.js for schema
 var fixture_destinations = [
   { 
-    name: "hello",
-    price: 8.99,
+    name: "3 Days on the Dalmatian Coast",
+    location: "Split, Croatia"
   },
   {
-    name: "secondHEllo",
-    price: 10,
+    name: "A week in the Andes",
+    location: "Chile"
   }
 ];
 
