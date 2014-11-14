@@ -1,4 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
+  text-align: center;
+}
+
+#main-wrapper {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }

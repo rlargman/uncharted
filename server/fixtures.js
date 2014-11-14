@@ -3,12 +3,12 @@ var fixture_destinations = [
   { 
     name: "3 Days on the Dalmatian Coast",
     location: "Split, Croatia",
-    imageSrc: "pig.jpg"
+    imageSrc: "earthporn.jpg"
   },
   {
     name: "A week in the Andes",
     location: "Chile",
-    imageSrc: "pig.jpg"
+    imageSrc: "earthporn.jpg"
   }
 ];
 

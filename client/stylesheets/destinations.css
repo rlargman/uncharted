@@ -1,7 +1,7 @@
 /* Styles related to the destination pages and templates */
 .destination-main-page {
-  height: 300px;
-  width: 300px; 
+  height: 600px;
+  width: 400px; 
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-clip: content-box; 
