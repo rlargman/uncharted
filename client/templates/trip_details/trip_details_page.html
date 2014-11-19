@@ -1,6 +1,18 @@
 <template name="tripDetailsPage">
-  <div class="trip-details-page">
-    <div class="destination-main-name">{{name}}</div>
-    <img class="heart-unfilled" src="heart.png" />
+  <div class="trip-details-page" >
+    <div class="trip-details-header clearfix">
+      <img class="trip-details-heart-unfilled" src="heart.png" />
+    </div>
+
+    <div class="destination-name">{{location}}</div>
+    <div class="destination-description">{{description}}</div>
+    <div class="trip-details-housing clearfix">
+      <img class="cards-icon housing-icon" src="heart.png" />
+      <span class="housing-text">{{name}}</span>
+    </div>
+
+    {{#each activities}}
+      {{> activityCard}}
+    {{/each}}
   </div>
 </template>
