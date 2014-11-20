@@ -2,10 +2,9 @@
 @import "globals";
 
 .trip-details-page {
+  padding-top: 20px;
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  background-clip: content-box;
   position: relative;
 }
 
@@ -18,8 +17,6 @@
   right: 0;
   left: 0;
   z-index: -1;
-  background-clip: content-box;
-  padding: 10px;
 }
 
 .trip-details-heart-unfilled {

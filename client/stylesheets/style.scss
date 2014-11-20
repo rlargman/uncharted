@@ -4,7 +4,13 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width:100%;
+  height:100%;
+}
+
 body {
+  display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: 11pt;
   margin: 0px;
@@ -13,6 +19,11 @@ body {
 
 #main-wrapper {
   max-width: 400px;
+  height:100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.ui-page .ui-page-theme-a .ui-page-active {
+  display: none;
 }

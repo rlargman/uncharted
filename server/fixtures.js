@@ -18,7 +18,7 @@ var fixture_destinations = [
       },
       {
         name: "Reserva El Chato",
-        description: "Hike through this nature preserve to see giant tortoises in their natural habitat.";
+        description: "Hike through this nature preserve to see giant tortoises in their natural habitat.",
         imageSrc: "Tortoise.jpg"
       },
       {
@@ -257,7 +257,7 @@ var fixture_destinations = [
     index: 9,
     name: "San Francisco",
     continent: "North America",
-    description: "Explore one the United State’s most wacky and creative city. Hostel: Orange Village Hostel",
+    description: "Explore one the United State’s most wacky and creative cities.",
     lodging: "Orange Village Hostel",
     imageSrc: "sf.jpg",
 
@@ -313,7 +313,7 @@ var fixture_destinations = [
     index: 11,
     name: "Cairo, Egypt",
     continent: "Africa",
-    description: "Explore some of the worlds most ancient and preserved artifacts. Hostel:  Family Palace, Downtown Cairo",
+    description: "Explore some of the world's most ancient and preserved artifacts.",
     lodging: "Family Palace, Downtown Cairo",
     imageSrc: "cairo.jpg",
 
