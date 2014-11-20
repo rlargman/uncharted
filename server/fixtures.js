@@ -120,7 +120,7 @@ var fixture_destinations = [
     continent: "Asia",
     description: "One of the World’s most modern cities, Hong Kong is a fascinating melting pot of people and cultures.",
     lodging: "Apple Hostel",
-    imageSrc: "destinations/hongkong.jpg",
+    imageSrc: "destinations/hongkong.JPG",
 
     activities: [
       {
