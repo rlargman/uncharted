@@ -1,9 +1,11 @@
 Template.destinationPage.events({
   'click .destination-main-page': function(e, template) {
     e.preventDefault();
-
-    var destinationId = template.data._id;
-    console.log(destinationId);
-    this.redirect('/details/' + destinationId);
+    
+    var destination = template.data;
+    Router.go(
+      '/destinations/details/' + destination._id, 
+      {destination: destination}
+    );
   }
 });

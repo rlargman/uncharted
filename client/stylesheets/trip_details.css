@@ -2,9 +2,23 @@
 
 .trip-details-page {
   background: rgb(71, 71, 71); /* fallback color */
-  background: rgba(71, 71, 71, 0.7);
+  background: rgba(71, 71, 71, 0.8);
   padding: 10px;
   background-clip: content-box;
+  position: relative;
+}
+
+.trip-details-page:after {
+  content: "";
+  background-image: url('earthporn.jpg');
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  background-clip: content-box;
+  padding: 10px;
 }
 
 .trip-details-heart-unfilled {
@@ -17,7 +31,7 @@
 .destination-name {
   font-family: 'Amatic SC', cursive;
   font-size: 25pt;
-  color: pink;
+  color: #EC7963;
 }
 
 .destination-description {
