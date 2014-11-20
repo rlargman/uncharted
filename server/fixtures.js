@@ -111,81 +111,81 @@ var fixture_destinations = [
 
   // destination 5
   { 
-    name: "",
-    continent: "",
-    description: "",
-    lodging: "",
-    imageSrc: "",
+    name: "Hong Kong",
+    continent: "Asia",
+    description: "One of the World’s most modern cities, Hong Kong is a fascinating melting pot of people and cultures.",
+    lodging: "Apple Hostel",
+    imageSrc: "hongkong.jpg",
 
     activities: [
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Victoria Peak",
+        description: "Hike Victoria Peak at dusk to catch the cityscape lightshow from the top. Enjoy Dinner at one of the many restaurants and then take the trolley down.",
+        imageSrc: "victoria.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Lan Kwai Fong Bar District",
+        description: "The world’s longest outdoor escalator takes you through a myriad of restaurants, bars and clubs with food, drinks and music from around the world. The streets of LKF are bustling every night of the week, don’t miss out.",
+        imageSrc: "lkf.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Tian Tan Buddha",
+        description: "Take the tram to Lantau island and see Hong Kong’s largest Buddha, which houses a monastery inside.",
+        imageSrc: "buddha.jpg"
       }
     ]
   },
 
   // destination 6
   { 
-    name: "",
-    continent: "",
-    description: "",
-    lodging: "",
-    imageSrc: "",
+    name: "Phuket, Thailand",
+    continent: "Asia",
+    description: "Enjoy surreal beaches, great diving and exotic gardens on Thailand’s largest island.",
+    lodging: "Pineapple Guesthouse",
+    imageSrc: "phuket.jpg",
 
     activities: [
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Freedom Beach",
+        description: "Take a longtail boat to this secluded beach, and spend the afternoon swimming in the pristine waters.",
+        imageSrc: "freedom.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Old Phuket Town",
+        description: "Explore this neighborhood for a relaxing afternoon appreciating Thai culture. ",
+        imageSrc: "oldphuket.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Phuket Butterfly Garden",
+        description: "Check out this pretty garden, and see butterflies sipping nectar, mating, laying eggs, and more.",
+        imageSrc: "butterfly.jpg"
       }
     ]
   },
 
   // destination 7
   { 
-    name: "",
-    continent: "",
-    description: "",
-    lodging: "",
-    imageSrc: "",
+    name: "Sydney, Australia",
+    continent: "Australia",
+    description: "Enjoy the beaches, culture, art and cuisine of Australia's oldest and largest city.",
+    lodging: "Kings Cross Backpackers",
+    imageSrc: "sydney.jpg",
 
     activities: [
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Bondi to Coogee Coastal Walk",
+        description: "Breathe in fresh, beachside air along this three mile route of the coast. The path through Waverley Cemetery to Coogee is actually the best bit.",
+        imageSrc: "coogee.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Catch a Sydney Swam Rugby Game",
+        description: "Catch a game at the Sydney Rugby stadium, ‘The Footy,’ in winter and witness some real fanaticism.",
+        imageSrc: "footy.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Savor a tasty brunch at Pinbone",
+        description: "Only open on Sundays, Pinbone offers an unparalleled brunch. Good coffee AND good food - what’s not to love?",
+        imageSrc: "pinbone.jpg"
       }
     ]
   },
