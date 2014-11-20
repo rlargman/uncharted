@@ -3,6 +3,7 @@ var fixture_destinations = [
 
   // destination 1
   { 
+    index: 0,
     name: "Galapagos, Ecuador",
     continent: "South America",
     description: "A must explore for outdoor enthusiasts and animal lovers, the Galapagos are an epic adventure.",
@@ -30,6 +31,7 @@ var fixture_destinations = [
 
   // destination 2
   { 
+    index: 1,
     name: "Rio de Janeiro, Brazil",
     continent: "South America",
     description: "Rio offers the best of all worlds, some awesome outdoor spaces and enchanting culture.",
@@ -57,6 +59,7 @@ var fixture_destinations = [
 
   // destination 3
   { 
+    index: 2,
     name: "Barcelona",
     continent: "Europe",
     description: "See awesome art & architecture, and party with Europe’s craziest in one of the world’s most unique cities.",
@@ -84,6 +87,7 @@ var fixture_destinations = [
 
   // destination 4
   { 
+    index: 3,
     name: "Florence, Italy",
     continent: "Europe",
     description: " A must in your lifetime, Florence has both natural beauty and some of the world’s best art & architecture.",
@@ -111,6 +115,7 @@ var fixture_destinations = [
 
   // destination 5
   { 
+    index: 4,
     name: "Hong Kong",
     continent: "Asia",
     description: "One of the World’s most modern cities, Hong Kong is a fascinating melting pot of people and cultures.",
@@ -138,6 +143,7 @@ var fixture_destinations = [
 
   // destination 6
   { 
+    index: 5,
     name: "Phuket, Thailand",
     continent: "Asia",
     description: "Enjoy surreal beaches, great diving and exotic gardens on Thailand’s largest island.",
@@ -165,6 +171,7 @@ var fixture_destinations = [
 
   // destination 7
   { 
+    index: 6,
     name: "Sydney, Australia",
     continent: "Australia",
     description: "Enjoy the beaches, culture, art and cuisine of Australia's oldest and largest city.",
@@ -191,6 +198,7 @@ var fixture_destinations = [
   },
     // destination 8
   { 
+    index: 7,
     name: "Auckland, New Zealand",
     continent: "Australia",
     description: "Auckland is located on the island of New Zealand and is a mountainous region. It is one of few cities to have two major harbours",
@@ -218,6 +226,7 @@ var fixture_destinations = [
 
   // destination 9
   { 
+    index: 8,
     name: "Kauaii, Hawaii",
     continent: "North America",
     description: "Enjoy both the Pacific Ocean and the greenest mountains on this natural Hawaiin paradise.",
@@ -245,6 +254,7 @@ var fixture_destinations = [
 
   // destination 10
   { 
+    index: 9,
     name: "San Francisco",
     continent: "North America",
     description: "Explore one the United State’s most wacky and creative city. Hostel: Orange Village Hostel",
@@ -272,6 +282,7 @@ var fixture_destinations = [
 
   // destination 11
   { 
+    index: 10,
     name: "Cape Town",
     continent: "Africa",
     description: "The city is famous for its harbour and landmarks suzh as Cape Point. Named one of the best places to visit by the New York Times",
@@ -299,6 +310,7 @@ var fixture_destinations = [
 
   // destination 12
   { 
+    index: 11,
     name: "Cairo, Egypt",
     continent: "Africa",
     description: "Explore some of the worlds most ancient and preserved artifacts. Hostel:  Family Palace, Downtown Cairo",
