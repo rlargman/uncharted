@@ -189,142 +189,140 @@ var fixture_destinations = [
       }
     ]
   },
-
-  // destination 8
+    // destination 8
   { 
-    name: "",
-    continent: "",
-    description: "",
-    lodging: "",
-    imageSrc: "",
+    name: "Auckland, New Zealand",
+    continent: "Australia",
+    description: "Auckland is located on the island of New Zealand and is a mountainous region. It is one of few cities to have two major harbours",
+    lodging: "Lodge in the City",
+    imageSrc: "auckland.jpg",
 
     activities: [
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Snorkel off Goat Island",
+        description: "Goat Island is a protected marine area, so the snorkeling is some of the best.",
+        imageSrc: "goatisland.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Mount Eden",
+        description: "Part of the Pacific Ring of Fire, Auckland is covered in volcanoes. Mont Eden offers a spectacular view of the city. ",
+        imageSrc: "mteden.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Auckland Art Gallery",
+        description: "With free daily tours, an afternoon in the Art Gallery is a great way to spend ann afternoon and see some local art.",
+        imageSrc: "aucklandartgallery.jpg "
       }
     ]
   },
 
   // destination 9
   { 
-    name: "",
-    continent: "",
-    description: "",
-    lodging: "",
-    imageSrc: "",
+    name: "Kauaii, Hawaii",
+    continent: "North America",
+    description: "Enjoy both the Pacific Ocean and the greenest mountains on this natural Hawaiin paradise.",
+    lodging: "Kauaii Beach House",
+    imageSrc: "kauaii.jpg",
 
     activities: [
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Snorkel Tunnels Reef",
+        description: "See beautiful coral, sea turtles and tropical fish in this reef just off of Tunnels Beach on the north shore of the island.",
+        imageSrc: "tunnels.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Hike to Hanakapiai Falls",
+        description: "See stunning views of the Napali Coast as you hike to this 300ft water fall. Take a swim in the pool as a reward before hiking the 4 miles back!",
+        imageSrc: "hanakapiai.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Have a Fish Taco at Pat's",
+        description: "Have the best tacos of your life at this Taco truck on the beach in Hanalei.",
+        imageSrc: "taqueria.jpg"
       }
     ]
   },
 
   // destination 10
   { 
-    name: "",
-    continent: "",
-    description: "",
-    lodging: "",
-    imageSrc: "",
+    name: "San Francisco",
+    continent: "North America",
+    description: "Explore one the United State’s most wacky and creative city. Hostel: Orange Village Hostel",
+    lodging: "Orange Village Hostel",
+    imageSrc: "sf.jpg",
 
     activities: [
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Baker Beach",
+        description: "Enjoy awesome views of the Golden Gate from this little beach oasis just outside the city.",
+        imageSrc: "bakerbeach.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Lolo’s in the Mission",
+        description: "Taste the best mexican food the city has to offer from a number of restaurants in the Mission neighborhood. We recommend Lolo’s.",
+        imageSrc: "lolo.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Learn and Play at Explorotorium ",
+        description: "This fun and interactive museum on the piers of the San Francisco Bay will get your mind jogging with illusions and other fun exhibits.",
+        imageSrc: "exploratorium.jpg"
       }
     ]
   },
 
   // destination 11
   { 
-    name: "",
-    continent: "",
-    description: "",
-    lodging: "",
-    imageSrc: "",
+    name: "Cape Town",
+    continent: "Africa",
+    description: "The city is famous for its harbour and landmarks suzh as Cape Point. Named one of the best places to visit by the New York Times",
+    lodging: "Zebra Crossing",
+    imageSrc: "capeTown.jpg",
 
     activities: [
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Museum Mile",
+        description: "Government Avenue provides access to the city’s best museums, from the National Gallery to the Iziko Planetarium. Wander down the street and see what catches your eye. ",
+        imageSrc: "capetownmuseummile.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Long Street",
+        description: "Explore the laid back and funky bars on Long Street. Don’t miss Julep which has comfy couches and great cocktails. ",
+        imageSrc: "julep-bar.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Beta Beach ",
+        description: "Just 10 minutes out of the city center this small protected beach is great for a refreshing swim. ",
+        imageSrc: "beta-beach.jpg"
       }
     ]
   },
 
   // destination 12
   { 
-    name: "",
-    continent: "",
-    description: "",
-    lodging: "",
-    imageSrc: "",
+    name: "Cairo, Egypt",
+    continent: "Africa",
+    description: "Explore some of the worlds most ancient and preserved artifacts. Hostel:  Family Palace, Downtown Cairo",
+    lodging: "Family Palace, Downtown Cairo",
+    imageSrc: "cairo.jpg",
 
     activities: [
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "The Great Pyramid of Giza",
+        description: "Visit one of the oldest seven wonders of the world. The great Pyramid of giza is a short distance from downtown cairo.",
+        imageSrc: "greatPyramid.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Museum of Cairo",
+        description: "The museum holds an extensive collection of ancient Egyptian artifacts. It is located in Cairo.",
+        imageSrc: "cairoMuseum.jpg"
       },
       {
-        name: "",
-        description: "",
-        imageSrc: ""
+        name: "Islamic Cairo",
+        description: "Visiting the Islamic Ciaro is stepping into a cultural wonderland that takes you back in time. ",
+        imageSrc: "islamicCairo.jpg"
       }
     ]
   },
-
 // end
 ];
 
