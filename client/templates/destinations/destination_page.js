@@ -33,13 +33,12 @@ var goToDestination = function(event, direction) {
 
   var currDestinationId = Session.get('currId');
   var currDestination = Destinations.findOne(currDestinationId);
-  console.log(currDestination);
+  
   var otherDestination = retrieveDestination(currDestination.index, direction);
   
   if(!otherDestination) {
     otherDestination = Destinations.findOne();
   }
-  console.log(otherDestination);
   
   Router.go('/destinations/' + otherDestination._id);  
 }
@@ -78,7 +77,7 @@ Template.destinationPage.events({
    * @param e - the event that triggered the handler
    * @param template - the current template
    */
-  'swipeleft .destination-main-page': function(e, template) {
+  /*'swipeleft .destination-main-page': function(e, template) {
     e.preventDefault();
 
     var currId = template.data._id;
@@ -89,6 +88,6 @@ Template.destinationPage.events({
     }
     
     Router.go('/destinations/' + prevDestination._id);  
-  }
+  }*/
 });
 
