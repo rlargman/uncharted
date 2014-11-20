@@ -15,9 +15,9 @@ var NEXT = 1;
  * @return - destination being retrieved
  */
 var retrieveDestination = function(currIndex, sort) {
-return Destinations.find({index: {$gt: currIndex}}, { 
+return Destinations.find({index: {$gt: currIndex, $lte: currIndex + 1}}, { 
       sort: {_id: sort},
-  }).fetch()[1];
+  }).fetch()[0];
 }
 
 /** 
@@ -28,11 +28,13 @@ return Destinations.find({index: {$gt: currIndex}}, {
  * @param event - the event that triggered the handler
  * @param direction - whether the next or previous destination should be shown
  */
-var goToDestination = function(event, direction, data) {
+var goToDestination = function(event, direction) {
   event.preventDefault();
 
-  var otherDestination = retrieveDestination(this.index, direction);
-  console.log(data);
+  var currDestinationId = Session.get('currId');
+  var currDestination = Destinations.findOne(currDestinationId);
+  console.log(currDestination);
+  var otherDestination = retrieveDestination(currDestination.index, direction);
   
   if(!otherDestination) {
     otherDestination = Destinations.findOne();
