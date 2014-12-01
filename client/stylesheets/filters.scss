@@ -1,0 +1,18 @@
+/* Styles related to the filters pages and templates */
+@import "globals";
+
+.filter-icon {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.filters-page {
+  background-color: #cccccc;
+}
+
+#first-icon-col {
+  padding: 0px;
+  margin: 0px;
+}

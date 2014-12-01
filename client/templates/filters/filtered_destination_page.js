@@ -23,8 +23,7 @@ function goToDestination(event, direction) {
 
   Session.set('currFilterIndex', currIndex);
   var nextDestination = destinations[currIndex];
-  Router.go('/destinations/filtered/' + nextDestination.continent + '/' + 
-            nextDestination._id);  
+  Router.go('filters/' + nextDestination.continent + '/' + nextDestination._id);  
 }
 
 Template.filteredDestinationPage.rendered = function() {
