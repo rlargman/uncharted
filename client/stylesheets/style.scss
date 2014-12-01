@@ -27,3 +27,14 @@ body {
 .ui-page .ui-page-theme-a .ui-page-active {
   display: none;
 }
+
+.heart-unfilled {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 5px;
+  background: rgb(255, 255, 255); /* fallback color */
+  background: rgba(255, 255, 255, 0.5);
+}
