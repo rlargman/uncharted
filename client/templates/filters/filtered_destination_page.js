@@ -22,11 +22,9 @@ function goToDestination(event, direction) {
   }
 
   Session.set('currFilterIndex', currIndex);
-  console.log(currIndex);
-  console.log(destinations[currIndex]);
-  var nextDestinationId = destinations[currIndex]._id;
-  console.log(nextDestinationId);
-  Router.go('/destinations/filtered/' + this.continent + '/' + nextDestinationId);  
+  var nextDestination = destinations[currIndex];
+  Router.go('/destinations/filtered/' + nextDestination.continent + '/' + 
+            nextDestination._id);  
 }
 
 Template.filteredDestinationPage.rendered = function() {
