@@ -67,27 +67,5 @@ Template.destinationPage.events({
     var destination = template.data;
     Router.go('/destinations/details/' + destination._id);
   },
-
-  /** 
-   * Takes the user to previous destination after a swipe left on the main 
-   * page/
-   *
-   * Arguments:
-   * ----------
-   * @param e - the event that triggered the handler
-   * @param template - the current template
-   */
-  /*'swipeleft .destination-main-page': function(e, template) {
-    e.preventDefault();
-
-    var currId = template.data._id;
-    var prevDestination = retrieveDestination(currId, -1);
-    
-    if(!prevDestination) {
-      prevDestination = Destinations.findOne();
-    }
-    
-    Router.go('/destinations/' + prevDestination._id);  
-  }*/
 });
 
