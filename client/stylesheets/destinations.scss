@@ -18,3 +18,11 @@
   text-align: right;
   font-size: 11pt;
 }
+
+.dimmer {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}

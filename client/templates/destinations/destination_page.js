@@ -43,6 +43,37 @@ var goToDestination = function(event, direction) {
   Router.go('/destinations/' + otherDestination._id);  
 }
 
+
+/*
+*Functionality to do stuff for the ShortPress functionality for the Wishlist
+*/
+var shortTap = function(event) {
+
+  console.log("short tap");  
+
+}
+
+/*
+*Function to do stuff for the Long press functionality for the Wishlist
+*/
+
+var longTap = function(event) {
+  $('.destination-main-page').fadeTo(100,.5);
+  console.log("long tap");
+}
+
+
+/*
+* Will turn on the event listener for the short tap
+* Needed because event listener had to be turned off for long press
+*/
+var turnOn = function() {
+  $(".heart-unfilled").on("tap", function(event){
+    console.log("short press re-enabled")
+    shortTap(event);
+  });
+}
+
 Template.destinationPage.rendered = function() {
   $('.destination-main-page').on("swipeleft", function(event) {
     goToDestination(event, PREVIOUS);
@@ -50,9 +81,30 @@ Template.destinationPage.rendered = function() {
   $('.destination-main-page').on("swiperight", function(event) {
     goToDestination(event, NEXT);
   }); 
+  //used for the short tap to add to the default wishlist
+  $(".heart-unfilled").on("tap", function(event){
+    shortTap(event);
+  });
+  //used for the long tap to add to the custom wishlist
+  $(".heart-unfilled").on("taphold", function(event){
+    $(".heart-unfilled").off("tap"); //the tap functionality was being called after taphold was called
+    longTap(event);
+    turnOn(); //turns back on 
+  });
+
 }
 
+
+
 Template.destinationPage.events({
+
+  'tap .heart-unfilled' : function(e, template){
+    console.log("short tap");
+  },
+
+
+
+
   /** 
    * Takes the user to the trip details page when the main page is clicked on.
    *
