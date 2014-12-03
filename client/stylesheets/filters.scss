@@ -1,25 +1,43 @@
 /* Styles related to the filters pages and templates */
 @import "globals";
 
-.filter-icon {
-  height: 100px;
-  width: 100px;
-  border-radius: 25%;
-  padding: 5px;
+.filter-label {
+  padding-bottom: 10px;
+  display: none;
+}
+
+.icon-bubble {
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
-  background-color: $PINK;
+  margin-bottom: 20px;
+}
+
+.filter-icon {
+  background: rgba(255, 136, 136, 0.6);
+  border-radius: 20px;
+  border: 1px solid $PINK;
+  height: 120px;
+  width: 120px;
+  padding: 10px;
 }
 
 .filters-page {
-  background: rgba(0, 0, 0, 0.6);
   background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.6);
   position: relative;
-  color: white;
+  width: 100%;
+  height: 100%;
 }
 
 .filters-page:after {
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
   content: "";
   background-image: url('earthporn.jpg');
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   bottom: 0;

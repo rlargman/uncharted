@@ -1,7 +1,7 @@
 Template.wishlists.helpers({ 
 
 	destinations: function() {
-		return Destinations.find().limit(3);
+		return Destinations.find();
 	}
 	
 });

@@ -1,0 +1,55 @@
+
+@import "globals";
+
+.individual-list{
+	width: 100%; 
+  	height: 100%;
+  	background-size: 100% 100%;
+
+  	background-color: #808080;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	position: relative;
+}
+
+.list-header {
+  	color: $PINK;
+  	font-family: 'Amatic SC', cursive;
+  	font-size: 40pt;
+
+  	border-bottom: 2px solid $PINK;
+}
+
+.list-back-button{
+	
+}
+.list-name {
+
+}
+
+/*styling for the entry template on the individual listpage*/
+
+.list-destination {
+  	padding: 20px 20px 20px 20px;
+  	border-bottom: 1px solid white;
+}
+
+
+.list-destination-image {
+	width: 100%;
+  	height: 200px;
+}
+
+.list-destination-name {
+	  font-family: 'Amatic SC';
+	  font-weight: bold;
+	  font-size: 20pt;
+	  text-align: left;
+	  color: $PINK;	
+}
+
+.list-destiantion-description {
+	text-align: left;
+  	color: white;
+
+}
