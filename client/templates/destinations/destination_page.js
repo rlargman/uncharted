@@ -123,8 +123,6 @@ Template.destinationPage.rendered = function() {
 
 }
 
-
-
 Template.destinationPage.events({
 
   'tap .heart-unfilled' : function(e, template){
