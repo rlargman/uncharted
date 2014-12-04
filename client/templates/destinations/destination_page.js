@@ -94,26 +94,6 @@ Template.destinationPage.rendered = function() {
 
 }
 
-
-  var triggerCSS = function(destination) {
-    var index = 0
-    $('trip-details-page').append(document.createElement('style'));
-    myStyleSheet = document.styleSheets[document.styleSheets.length-1];
-    console.log('triggered');
-    var $element = $('.trip-details-page');
-    var id = $element.attr('id');
-    var rule;
-    var selector = "#"+id+":after";
-        index = $element.data('pseudoIndex');
-
-    rule = selector+'{background-image:"'+destination.imageSrc+'"; }';
-
-    myStyleSheet.insertRule(rule, index);
-
-  }
-
-
-
 Template.destinationPage.events({
   /** 
    * Takes the user to the trip details page when the main page is clicked on.
@@ -125,11 +105,8 @@ Template.destinationPage.events({
    */
   'click .destination-main-name': function(e, template) {
     e.preventDefault();
-    console.log(template.data);
     var destination = template.data;
-    triggerCSS(destination);
-    $('trip-details-page').css('background-image',destination.imageSrc);
-    //document.styleSheets[0].insertRule('.trip-details-page:after','background-image:'+destination.imageSrc);
+    Session.set("destination", destination);
     Router.go('/destinations/details/' + destination._id);
   },
 });
