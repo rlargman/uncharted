@@ -3,8 +3,10 @@
     class="destination-main-page" 
     style="background-image: url(/{{ imageSrc }})">
 
-    <div class="destination-main-name">{{name}}</div>
+    <div class="destination-main-name">
+      <img class="menu-icon" src="/white-menu.png" />
+      {{name}}
+    </div>
     <img class="heart-unfilled" src="/heart.png" />
-    <a href="/filters" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">Open dialog</a>
   </div>
 </template>

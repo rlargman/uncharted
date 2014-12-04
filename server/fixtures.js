@@ -8,7 +8,8 @@ var fixture_destinations = [
     continent: "South America",
     description: "A must explore for outdoor enthusiasts and animal lovers, the Galapagos are an epic adventure.",
     lodging: "Hostal Loja",
-    imageSrc: "destinations/galapagos.jpg",
+    imageSrc: "destinations/galapagos.jpeg",
+    listImageSrc: "destinations/galapagos-list.jpeg",
 
     activities: [
       {
@@ -39,7 +40,9 @@ var fixture_destinations = [
     continent: "South America",
     description: "Rio offers the best of all worlds, some awesome outdoor spaces and enchanting culture.",
     lodging: "Cabana Copa Hostel",
-    imageSrc: "destinations/rio.jpg",
+    imageSrc: "destinations/rio.jpeg",
+    listImageSrc: "destinations/rio-list.jpeg",
+
 
     activities: [
       {
@@ -70,7 +73,8 @@ var fixture_destinations = [
     continent: "Europe",
     description: "See awesome art & architecture, and party with Europe’s craziest in one of the world’s most unique cities.",
     lodging: "Hola Hostel",
-    imageSrc: "destinations/barcelona.jpg",
+    imageSrc: "destinations/barcelona.jpeg",
+    listImageSrc: "destinations/barcelona-list.jpeg",
 
     activities: [
       {
@@ -101,7 +105,8 @@ var fixture_destinations = [
     continent: "Europe",
     description: " A must in your lifetime, Florence has both natural beauty and some of the world’s best art & architecture.",
     lodging: "Hotel Benvenuti",
-    imageSrc: "destinations/florence.jpg",
+    imageSrc: "destinations/florence.jpeg",
+    listImageSrc: "destinations/florence-list.jpeg",
 
     activities: [
       {
@@ -132,7 +137,8 @@ var fixture_destinations = [
     continent: "Asia",
     description: "One of the World’s most modern cities, Hong Kong is a fascinating melting pot of people and cultures.",
     lodging: "Apple Hostel",
-    imageSrc: "destinations/hongkong.JPG",
+    imageSrc: "destinations/hongkong.jpeg",
+    listImageSrc: "destinations/hongkong-list.jpeg",
 
     activities: [
       {
@@ -163,7 +169,8 @@ var fixture_destinations = [
     continent: "Asia",
     description: "Enjoy surreal beaches, great diving and exotic gardens on Thailand’s largest island.",
     lodging: "Pineapple Guesthouse",
-    imageSrc: "destinations/phuket.jpg",
+    imageSrc: "destinations/phuket.jpeg",
+    listImageSrc: "destinations/phuket-list.jpeg",
 
     activities: [
       {
@@ -194,7 +201,8 @@ var fixture_destinations = [
     continent: "Australia",
     description: "Enjoy the beaches, culture, art and cuisine of Australia's oldest and largest city.",
     lodging: "Kings Cross Backpackers",
-    imageSrc: "destinations/sydney.jpg",
+    imageSrc: "destinations/sydney.jpeg",
+    listImageSrc: "destinations/sydney-list.jpeg",
 
     activities: [
       {
@@ -224,7 +232,8 @@ var fixture_destinations = [
     continent: "Australia",
     description: "Auckland is located on the island of New Zealand and is a mountainous region. It is one of few cities to have two major harbours",
     lodging: "Lodge in the City",
-    imageSrc: "destinations/auckland.jpg",
+    imageSrc: "destinations/auckland.jpeg",
+    listImageSrc: "destinations/auckland-list.jpeg",
 
     activities: [
       {
@@ -251,11 +260,12 @@ var fixture_destinations = [
   // destination 9
   { 
     index: 8,
-    name: "Kauaii, Hawaii",
+    name: "Kauai, Hawaii",
     continent: "North America",
     description: "Enjoy both the Pacific Ocean and the greenest mountains on this natural Hawaiin paradise.",
     lodging: "Kauaii Beach House",
-    imageSrc: "destinations/kauaii.jpg",
+    imageSrc: "destinations/Kauai.jpeg",
+    listImageSrc: "destinations/Kauai-list.jpeg",
 
     activities: [
       {
@@ -286,7 +296,8 @@ var fixture_destinations = [
     continent: "North America",
     description: "Explore one the United State’s most wacky and creative cities.",
     lodging: "Orange Village Hostel",
-    imageSrc: "destinations/sf.jpg",
+    imageSrc: "destinations/sf.jpeg",
+    listImageSrc: "destinations/sf-list.jpeg",
 
     activities: [
       {
@@ -317,7 +328,8 @@ var fixture_destinations = [
     continent: "Africa",
     description: "The city is famous for its harbour and landmarks suzh as Cape Point. Named one of the best places to visit by the New York Times",
     lodging: "Zebra Crossing",
-    imageSrc: "destinations/capeTown.jpg",
+    imageSrc: "destinations/capetown.jpeg",
+    listImageSrc: "destinations/capetown-list.jpeg",
 
     activities: [
       {
@@ -348,7 +360,8 @@ var fixture_destinations = [
     continent: "Africa",
     description: "Explore some of the world's most ancient and preserved artifacts.",
     lodging: "Family Palace, Downtown Cairo",
-    imageSrc: "destinations/cairo.jpg",
+    imageSrc: "destinations/cairo.jpeg",
+    imageSrc: "destinations/cairo-list.jpeg",
 
     activities: [
       {
@@ -382,3 +395,15 @@ if (Destinations.find().count() === 0) {
     Destinations.insert(destination);
   } 
 }
+
+// default wishlist
+var fixture_wishlist = { name: 'My Favorites (Default)', destinations: [], default_list: true };
+
+// loads default wishlists to Wishlists collection
+if (Wishlists.find().count() === 0) {
+  Wishlists.insert(fixture_wishlist);
+}
+
+
+
+
