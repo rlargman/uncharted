@@ -10,13 +10,15 @@
 
 .trip-details-page:after {
   content: "";
-  background-image: url('earthporn.jpg');
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: -1;
+}
+.trip-details-page:after {
+    background-image: url('earthporn.jpg');
 }
 
 .trip-details-heart-unfilled {

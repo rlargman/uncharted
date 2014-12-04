@@ -1,4 +1,5 @@
 Template.tripDetailsPage.events({
+	
   'click .trip-details-page': function(e, template) {
     e.preventDefault();
     
