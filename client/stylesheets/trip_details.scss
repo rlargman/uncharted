@@ -2,15 +2,16 @@
 @import "globals";
 
 .trip-details-page {
-  padding-top: 20px;
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.6);
   position: relative;
+  background-size: 100% 100%;
 }
 
 .trip-details-page:after {
   content: "";
   background-image: url('earthporn.jpg');
+  background-size: 100% 100%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -28,7 +29,7 @@
 
 .destination-name {
   font-family: 'Amatic SC', cursive;
-  font-size: 40pt;
+  font-size: 80pt;
   color: $PINK;
 }
 
@@ -46,12 +47,12 @@
 }
 
 .cards-icon {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   padding: 5px;
 }
 
 .housing-text {
-  line-height: 50px;
+  line-height: 100px;
   color: white;
 }
