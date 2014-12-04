@@ -131,22 +131,13 @@ Template.destinationPage.events({
     console.log("short tap");
   },
 
-
-
-
-  /** 
-   * Takes the user to the trip details page when the main page is clicked on.
-   *
-   * Arguments:
-   * ----------
-   * @param e - the event that triggered the handler
-   * @param template - the current template
-   */
-  /*'click .destination-main-page': function(e, template) {
+  'click .menu-icon': function(e, template) {
     e.preventDefault();
-    
-    var destination = template.data;
-    Router.go('/destinations/details/' + destination._id);
-  },*/
+
+    var $destinationMainPage =  $('.destination-main-page');
+    $destinationMainPage.off("tap");
+    console.log("hello");
+    addTripDetailsEventListener();
+  }
 });
 
