@@ -123,6 +123,10 @@ Template.destinationPage.rendered = function() {
 
 }
 
+function showMenu() {
+  
+}
+
 Template.destinationPage.events({
 
   'tap .heart-unfilled' : function(e, template){
@@ -134,7 +138,7 @@ Template.destinationPage.events({
 
     var $destinationMainPage =  $('.destination-main-page');
     $destinationMainPage.off("tap");
-    console.log("hello");
+    showMenu();
     addTripDetailsEventListener();
   }
 });
