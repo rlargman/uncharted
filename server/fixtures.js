@@ -382,3 +382,15 @@ if (Destinations.find().count() === 0) {
     Destinations.insert(destination);
   } 
 }
+
+// default wishlist
+var fixture_wishlist = { name: 'My Favorites (Default)', destinations: [], default_list: true };
+
+// loads default wishlists to Wishlists collection
+if (Wishlists.find().count() === 0) {
+  Wishlists.insert(fixture_wishlist);
+}
+
+
+
+

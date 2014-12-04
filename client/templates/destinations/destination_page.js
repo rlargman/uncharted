@@ -81,10 +81,18 @@ Template.destinationPage.rendered = function() {
   $('.destination-main-page').on("swiperight", function(event) {
     goToDestination(event, NEXT);
   }); 
-  //used for the short tap to add to the default wishlist
-  $(".heart-unfilled").on("tap", function(event){
+  
+  // used for the short tap to add to the default wishlist
+  $(".heart-unfilled").on("tap", function(event) {
     shortTap(event);
+    var currDestinationId = Session.get('currId');
+    
+    // adds the current destination to the default wish list's destinations
+    Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {
+      $addToSet: { destinations: currDestinationId }
+    });
   });
+
   //used for the long tap to add to the custom wishlist
   $(".heart-unfilled").on("taphold", function(event){
     $(".heart-unfilled").off("tap"); //the tap functionality was being called after taphold was called
