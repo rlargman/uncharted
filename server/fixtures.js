@@ -361,7 +361,7 @@ var fixture_destinations = [
     description: "Explore some of the world's most ancient and preserved artifacts.",
     lodging: "Family Palace, Downtown Cairo",
     imageSrc: "destinations/cairo.jpeg",
-    imageSrc: "destinations/cairo-list.jpeg",
+    listImageSrc: "destinations/cairo-list.jpeg",
 
     activities: [
       {
