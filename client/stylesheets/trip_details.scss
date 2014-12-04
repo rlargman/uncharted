@@ -3,21 +3,9 @@
 
 .trip-details-page {
   background: rgb(0, 0, 0); /* fallback color */
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   position: relative;
   background-size: 100% 100%;
-}
-
-.trip-details-page:after {
-  content: "";
-  background-image: url('earthporn.jpg');
-  background-size: 100% 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
 }
 
 .trip-details-heart-unfilled {
