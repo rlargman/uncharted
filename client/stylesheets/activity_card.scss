@@ -3,18 +3,18 @@
 
 .activity-card {
   padding: 20px 20px 20px 20px;
-  border-top: 1px solid white;
+  position: relative;
 }
 
 .activity-image {
   width: 100%;
-  height: 200px;
+  height: 500px;
+  border-bottom: 1px solid $PINK;
 }
 
 .activity-name {
   font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  font-size: 50pt;
+  font-size: 75pt;
   text-align: left;
   color: $PINK;
 }
@@ -22,4 +22,11 @@
 .activity-description {
   text-align: left;
   color: white;
+}
+
+.positioning {
+  position: absolute;
+  left: 80%;
+  top: 475px;
+  border: 1px solid $PINK;
 }

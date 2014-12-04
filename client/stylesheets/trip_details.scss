@@ -48,8 +48,10 @@
 
 .cards-icon {
   height: 100px;
-  width: 100px;
+  width: 100px; 
   padding: 5px;
+  background-color: $PINK;
+  border-radius: 50%;
 }
 
 .housing-text {
