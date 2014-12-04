@@ -31,8 +31,7 @@ return Destinations.find({index: {$gt: currIndex, $lte: currIndex + 1}}, {
 var goToDestination = function(event, direction) {
   event.preventDefault();
 
-  var currDestinationId = Session.get('currId');
-  var currDestination = Destinations.findOne(currDestinationId);
+  var currDestination = Session.get('destination');
   
   var otherDestination = retrieveDestination(currDestination.index, direction);
   
@@ -40,6 +39,7 @@ var goToDestination = function(event, direction) {
     otherDestination = Destinations.findOne();
   }
   
+  Session.set('destination', otherDestination);
   Router.go('/destinations/' + otherDestination._id);  
 }
 
