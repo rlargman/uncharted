@@ -74,13 +74,34 @@ var turnOn = function() {
   });
 }
 
-Template.destinationPage.rendered = function() {
-  $('.destination-main-page').on("swipeleft", function(event) {
-    goToDestination(event, PREVIOUS);
+/*
+ * Adds the tap event listener to the page and redirects to trip details
+ */
+function addTripDetailsEventListener() {
+  var $destinationMainPage =  $('.destination-main-page');  
+  $destinationMainPage.on("tap", function(event) {
+    event.preventDefault();
+    
+    var destination = Session.get('destination');
+    Router.go('/destinations/details/' + destination._id);
   });
-  $('.destination-main-page').on("swiperight", function(event) {
+}
+
+Template.destinationPage.rendered = function() {
+  var $destinationMainPage =  $('.destination-main-page');
+
+  $destinationMainPage.on("swipeleft", function(event) {
+    $destinationMainPage.off("tap"); 
+    goToDestination(event, PREVIOUS);
+    addTripDetailsEventListener();
+  });
+  $destinationMainPage.on("swiperight", function(event) {
+    $destinationMainPage.off("tap");     
     goToDestination(event, NEXT);
+    addTripDetailsEventListener();
   }); 
+
+  addTripDetailsEventListener();
   
   // used for the short tap to add to the default wishlist
   $(".heart-unfilled").on("tap", function(event) {
@@ -121,11 +142,11 @@ Template.destinationPage.events({
    * @param e - the event that triggered the handler
    * @param template - the current template
    */
-  'click .destination-main-name': function(e, template) {
+  /*'click .destination-main-page': function(e, template) {
     e.preventDefault();
     
     var destination = template.data;
     Router.go('/destinations/details/' + destination._id);
-  },
+  },*/
 });
 
