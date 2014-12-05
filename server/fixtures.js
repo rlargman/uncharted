@@ -423,8 +423,41 @@ var fixture_destinations = [
       },
       {
         name: "Paraglide in Interlaken",
-        description: "Looking for a little adventure? Paraglide through in Interlaken to get the best views of",
+        description: "Looking for a little adventure? Paraglide through in Interlaken to get the best views of the peaks",
         imageSrc: "destinations/paraglideinterlaken.jpg",
+        category: "outdoors"
+      }
+    ]
+  },
+
+  // destination 14
+  { 
+    index: 13,
+    name: "Iceland",
+    continent: "Europe",
+    description: "From fjords to faults, Iceland is Europe's most unique destination",
+    lodging: "Loft Hostel",
+    imageSrc: "destinations/iceland.jpeg",
+    listImageSrc: "destinations/iceland-list.jpeg",
+    addedToWishlist: false,
+
+    activities: [
+      {
+        name: "Blue Lagoon",
+        description: "In southwesten Iceland, the Blue Lagoon is a natural geothermal spa",
+        imageSrc: "destinations/bluelagoon.jpg",
+        category: "landmark"
+      },
+      {
+        name: "Hits the bars in Reykjavik",
+        description: "Reykjavik is colorful in more ways than one",
+        imageSrc: "destinations/reykjavik.jpg",
+        category: "drink"
+      },
+      {
+        name: "Breidavik Beach",
+        description: "A perfect, unspoiled beach in Iceland's northeast corner.",
+        imageSrc: "destinations/breidavik.jpg",
         category: "outdoors"
       }
     ]
