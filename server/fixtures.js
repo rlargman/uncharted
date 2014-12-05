@@ -463,6 +463,39 @@ var fixture_destinations = [
     ]
   },
 
+ // destination 15
+  { 
+    index: 14,
+    name: "Montenegro",
+    continent: "Europe",
+    description: "From wild mountains to pristine beaches, Montenegro is postcard ready.",
+    lodging: "Vila Jadran",
+    imageSrc: "destinations/montenegro.jpeg",
+    listImageSrc: "destinations/montenegro-list.jpeg",
+    addedToWishlist: false,
+
+    activities: [
+      {
+        name: "See Budva's Charm",
+        description: "One of many beach towns, Budva epitomizes Montenegro's beauty.",
+        imageSrc: "destinations/budva.jpg",
+        category: "neighborhood"
+      },
+      {
+        name: "Stari Bar's Ruins",
+        description: "See stony ruins in the countryside",
+        imageSrc: "destinations/staribar.jpg",
+        category: "landmark"
+      },
+      {
+        name: "Durmitor Canyon",
+        description: "Montenegro isn't all sleepy beach towns, however. You can raft through the Durmitor canyon.",
+        imageSrc: "destinations/durmitor.jpg",
+        category: "outdoors"
+      }
+    ]
+  },
+
 // end
 ];
 
