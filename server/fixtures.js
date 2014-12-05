@@ -417,13 +417,13 @@ var fixture_destinations = [
       },
       {
         name: "Hike in Grindelwald",
-description: "Take a gondola from Grindelwald up to great day hikes around peaks Pfingstegg and First”
+        description: "Take a gondola from Grindelwald up to great day hikes around peaks Pfingstegg and First",
         imageSrc: "destinations/grindelwald.jpg",
         category: "outdoors"
       },
       {
         name: "Paraglide in Interlaken",
-        description: "Looking for a little adventure? Paraglide through in Interlaken to get the best views of ",
+        description: "Looking for a little adventure? Paraglide through in Interlaken to get the best views of",
         imageSrc: "destinations/paraglideinterlaken.jpg",
         category: "outdoors"
       }
