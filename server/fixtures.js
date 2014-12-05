@@ -313,7 +313,7 @@ var fixture_destinations = [
         category: "food"
       },
       {
-        name: "Learn and Play at Explorotorium ",
+        name: "Learn and Play at Explorotorium",
         description: "This fun and interactive museum on the piers of the San Francisco Bay will get your mind jogging with illusions and other fun exhibits.",
         imageSrc: "destinations/exploratorium.jpg",
         category: "museum"
@@ -326,7 +326,7 @@ var fixture_destinations = [
     index: 10,
     name: "Cape Town",
     continent: "Africa",
-    description: "The city is famous for its harbour and landmarks suzh as Cape Point. Named one of the best places to visit by the New York Times",
+    description: "The city is famous for its harbour and landmarks such as Cape Point. Named one of the best places to visit by the New York Times",
     lodging: "Zebra Crossing",
     imageSrc: "destinations/capetown.jpeg",
     listImageSrc: "destinations/capetown-list.jpeg",
