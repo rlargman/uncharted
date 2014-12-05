@@ -105,8 +105,8 @@ var fixture_destinations = [
     continent: "Europe",
     description: " A must in your lifetime, Florence has both natural beauty and some of the world’s best art & architecture.",
     lodging: "Hotel Benvenuti",
-    imageSrc: "destinations/florence.jpeg",
-    listImageSrc: "destinations/florence-list.jpeg",
+    imageSrc: "destinations/florence.jpg",
+    listImageSrc: "destinations/florence-list.jpg",
 
     activities: [
       {

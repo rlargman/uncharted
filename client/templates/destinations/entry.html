@@ -1,0 +1,14 @@
+<template name="addToWishlistsEntry">
+  
+  	{{#if destinations}}
+    	<div class="add-to-wishlists-entry">
+			<img class="first-destination-image" src="/{{listImageSrc}}" />
+			<div class="add-to-wishlists-wishlist-name">{{name}}</div>
+  		</div>
+    {{else }}
+    	<div class="no-img-background">
+			<div class="add-to-wishlists-wishlist-name">{{name}}</div>
+  		</div>
+   	{{/if}}
+
+</template>
