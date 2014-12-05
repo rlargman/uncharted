@@ -26,6 +26,8 @@ Template.addToWishlistsEntry.rendered = function() {
     	Destinations.update( { _id: currDestinationId }, {                                 // updates property to show that destination is added to a wishlist
       		$set: { addedToWishlist: true }
     	});
+    var $menu_button = $('.static-menu');
+    $menu_button.toggleClass('invisible');
 
 		// route back to the current destination main page
 		Router.go('/destinations/' + currDestinationId);
