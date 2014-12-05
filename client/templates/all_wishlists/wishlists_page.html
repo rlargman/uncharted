@@ -1,11 +1,11 @@
 <template name="wishlistsPage">
-	<div class="wishlists-main-page clearfix">
+	<div class="wishlists-main-page">
 		<div class="wishlists-title">
 			<span>Wishlists</span>
 			<img class="plus-icon" src="/plus.png" />
 		</div>
 		{{#each destinations}}
-      	{{> wishlistsEntry}}
-    {{/each}}
+      		{{> wishlistsEntry}}
+    	{{/each}}
   	</div>
 </template>

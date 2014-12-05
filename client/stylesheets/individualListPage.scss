@@ -7,7 +7,7 @@
   	background-size: 100% 100%;
 
   	background-color: #808080;
-  	padding-top: 5px;
+  	
   	padding-bottom: 5px;
   	position: relative;
 }
@@ -21,9 +21,17 @@
 }
 
 .list-back-button{
-	
+	height: 70px;
+  width: 70px;
+  float: left;
+  top:0px;
+  left: 0px;
+  padding-left: 10px;
 }
 .list-name {
+  margin-right:25%; 
+  margin-left:25%;
+  font-size: 100pt;
 
 }
 
@@ -32,6 +40,7 @@
 .list-destination {
   	padding: 20px 20px 20px 20px;
   	border-bottom: 1px solid white;
+    background-color: #808080;
 }
 
 
@@ -43,13 +52,13 @@
 .list-destination-name {
 	  font-family: 'Amatic SC';
 	  font-weight: bold;
-	  font-size: 20pt;
-	  text-align: left;
+	  font-size: 75pt;
+    text-align: left;
 	  color: $PINK;	
 }
 
 .list-destiantion-description {
 	text-align: left;
-  	color: white;
+  color: white;
 
 }

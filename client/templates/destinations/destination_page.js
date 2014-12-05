@@ -17,7 +17,6 @@ var NEXT = 1;
 var retrieveDestination = function(currIndex, sort) {
   var count = Destinations.find().count()-1;
   var next;
-  console.log("index"+currIndex+"\t count: "+count);
   if (currIndex==count && sort==1){
     next=0;
   } else if (currIndex==0 && sort==-1){
@@ -77,7 +76,6 @@ var longTap = function(event) {
 */
 var turnOn = function() {
   $(".heart-unfilled").on("tap", function(event){
-    console.log("short press re-enabled")
     shortTap(event);
   });
 }

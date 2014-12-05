@@ -2,10 +2,9 @@
 	width: 100%; 
 	height: 100%;
 	background-size: 100% 100%;
-	background-repeat: no-repeat;
 	background-color: #808080;
 	padding-top: 20px;
-	position: relative;
+	/*position: relative;*/
 	text-shadow: none;
 }
 
@@ -28,6 +27,7 @@
 	padding: 10px 20px 10px 20px;
 	position: relative;
 	border-bottom: 2px solid #FF8888;
+	background-color: #808080;
 }
 
 .wishlist-name {

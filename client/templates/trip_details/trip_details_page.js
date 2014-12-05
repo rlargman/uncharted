@@ -12,7 +12,7 @@ Template.tripDetailsPage.rendered=function(){
 
 
 	var currDestination = Session.get("destination");
-	console.log(currDestination);
+
 
 
 	
@@ -44,7 +44,7 @@ Template.tripDetailsPage.rendered=function(){
 		z-index: -1;\
 		background-size: 100%;\
 	}';
-	console.log("rule: "+rule);
+
 
     $('head').append(document.createElement('style'));
     myStyleSheet = document.styleSheets[0];
