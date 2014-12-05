@@ -25,5 +25,14 @@ Template.menu.events({
     $destinationMainPage.off("tap");
     toggleMenu();
     Router.go('/filters');
+  },
+
+  'click #my-wishlists': function(e, template) {
+    e.preventDefault();
+
+    var $destinationMainPage =  $('.destination-main-page');
+    $destinationMainPage.off("tap");
+    toggleMenu();
+    Router.go('/wishlists');
   }
 });
