@@ -1,48 +1,58 @@
+@import "globals";
+
 .wishlists-main-page {
-	width: 100%; 
-	height: 100%;
+
 	background-size: 100% 100%;
-	background-color: #808080;
-	padding-top: 20px;
-	/*position: relative;*/
+	background: rgba(0, 0, 0, 0.7);
+	position: relative;
 	text-shadow: none;
 }
 
+.wishlists-main-page:after {
+  background-size: 100%;
+  content: "";
+  background-image: url('mtn-nologo.jpg');
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;  
+}
+
 .wishlists-title {
-	color: #FF8888;
-  	padding: 5px;
 	font-family: 'Amatic SC', cursive;
-  	font-size: 40pt;
-  	color: #FF8888;
-	border-bottom: 2px solid;
-	border-bottom-color: #FF8888; 
+  font-size: 60pt;
+  line-height: 100px;
+  color: $PINK;
+	border-bottom: 1px solid $PINK;
 }
 
 .destination-image {
 	width: 100%;
-  height: 500px;
+  height: 400px;
 }
 
 .wishlists-entry {
-	padding: 10px 20px 10px 20px;
+	padding: 20px 40px 20px 40px;
 	position: relative;
-	border-bottom: 2px solid #FF8888;
-	background-color: #808080;
 }
 
 .wishlist-name {
 	position: absolute; 
-	top: 80px; 
+	top: 20px; 
 	text-align: left;
-	left: 25px;
+	left: 40px;
 	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .plus-icon {
 	height: 50px;
-	width: 60px;
+	width: 50px;
 	float: right;
-	padding-right: 10px;
+	margin-top: 20px;
+	margin-right: 20px;
 }
 
 .menu-icon {
