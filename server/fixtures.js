@@ -60,7 +60,7 @@ var fixture_destinations = [
       {
         name: "Pedra do Sal",
         description: "Enjoy a Caipirinha in this funky neighborhood north of the city. The open air bar with live music makes a great night out.",
-        imageSrc: "destinations/pedradesal.jpg",
+        imageSrc: "destinations/pedradesal.png",
         category: "drink"
       }
     ]
