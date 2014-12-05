@@ -15,6 +15,7 @@ Template.menu.events({
     var $destinationMainPage =  $('.destination-main-page');
     $destinationMainPage.off("tap");
     toggleMenu();
+    Session.set('currentlyFiltering', false);
     Router.go('/destinations');
   },
 
@@ -33,6 +34,7 @@ Template.menu.events({
     var $destinationMainPage =  $('.destination-main-page');
     $destinationMainPage.off("tap");
     toggleMenu();
+    Session.set('currentlyFiltering', false);
     Router.go('/wishlists');
   }
 });

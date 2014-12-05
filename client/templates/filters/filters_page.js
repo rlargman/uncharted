@@ -4,6 +4,7 @@ Template.filtersPage.events({
    */
   'click #north-america': function(e, template) {
     e.preventDefault();
+    Session.set('currentlyFiltering', true);
     Router.go('/filters/North America');
   },
 
@@ -12,6 +13,7 @@ Template.filtersPage.events({
    */
   'click #south-america': function(e, template) {
     e.preventDefault();
+    Session.set('currentlyFiltering', true);
     Router.go('/filters/South America');
   },
 
@@ -20,6 +22,7 @@ Template.filtersPage.events({
    */
   'click #australia': function(e, template) {
     e.preventDefault();
+    Session.set('currentlyFiltering', true);
     Router.go('/filters/Australia');
   },
 
@@ -28,6 +31,7 @@ Template.filtersPage.events({
    */
   'click #africa': function(e, template) {
     e.preventDefault();
+    Session.set('currentlyFiltering', true);
     Router.go('/filters/Africa');
   },
 
@@ -36,6 +40,7 @@ Template.filtersPage.events({
    */
   'click #asia': function(e, template) {
     e.preventDefault();
+    Session.set('currentlyFiltering', true);
     Router.go('/filters/Asia');
   },
 
@@ -44,6 +49,7 @@ Template.filtersPage.events({
    */
   'click #europe': function(e, template) {
     e.preventDefault();
+    Session.set('currentlyFiltering', true);
     Router.go('/filters/Europe');
   }
 });
