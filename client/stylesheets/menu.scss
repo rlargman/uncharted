@@ -1,0 +1,41 @@
+/* Styles associated with the menu */
+@import "globals";
+
+.menu-wrapper {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  padding: 10px;
+  z-index: 1;
+}
+
+.nav-icon {
+  height: 250px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-section {
+  border-top: 1px solid white;
+  color: $PINK;
+  padding-bottom: 25px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 80px;
+}
+
+.first-nav {
+  margin-top: 100px;
+}
+
+.invisible {
+  display: none;
+}
+
+.static-menu {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px;
+}

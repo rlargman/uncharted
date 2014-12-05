@@ -123,8 +123,9 @@ Template.destinationPage.rendered = function() {
 
 }
 
-function showMenu() {
-  
+function toggleMenu() {
+  var $menu = $('.menu-wrapper');
+  $menu.toggleClass('invisible');
 }
 
 Template.destinationPage.events({
@@ -138,8 +139,9 @@ Template.destinationPage.events({
 
     var $destinationMainPage =  $('.destination-main-page');
     $destinationMainPage.off("tap");
-    showMenu();
+    toggleMenu();
     addTripDetailsEventListener();
   }
+
 });
 
