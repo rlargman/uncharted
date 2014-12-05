@@ -1,4 +1,8 @@
 Template.addToWishlistsEntry.helpers ({
+  hasDestinations: function() {
+    return this.destinations.length > 0
+  },
+
 	firstDestinationImgSrc:  function() {
 		currWishlistDestinations = this.destinations;
 		firstDestinationId = currWishlistDestinations[0];
