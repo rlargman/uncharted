@@ -1,4 +1,5 @@
 /* Styles associated with the menu */
+@import "globals";
 
 .menu-wrapper {
   height: 100%;
@@ -17,7 +18,7 @@
 
 .nav-section {
   border-top: 1px solid white;
-  color: white;
+  color: $PINK;
   padding-bottom: 25px;
   font-family: 'Amatic SC', cursive;
   font-size: 80px;
