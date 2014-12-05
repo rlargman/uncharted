@@ -15,9 +15,17 @@ var NEXT = 1;
  * @return - destination being retrieved
  */
 var retrieveDestination = function(currIndex, sort) {
-return Destinations.find({index: {$gt: currIndex, $lte: currIndex + 1}}, { 
-      sort: {_id: sort},
-  }).fetch()[0];
+  var count = Destinations.find().count()-1;
+  var next;
+  console.log("index"+currIndex+"\t count: "+count);
+  if (currIndex==count && sort==1){
+    next=0;
+  } else if (currIndex==0 && sort==-1){
+    next=count
+  } else {
+    next = currIndex+sort;
+  }
+  return Destinations.find({index: next}).fetch()[0];
 }
 
 /** 
@@ -121,15 +129,31 @@ Template.destinationPage.rendered = function() {
   addTripDetailsEventListener();
   
   // used for the short tap to add to the default wishlist
+<<<<<<< HEAD
   $("#heart").on("tap", function(event) {
     shortTap(event);
+=======
+  $(".heart-unfilled").on("tap", function(event) {
+    $destinationMainPage.off("tap"); 
+    shortTap(event);
+    var currDestinationId = Session.get('currId');
+    
+    // adds the current destination to the default wish list's destinations
+    Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {
+      $addToSet: { destinations: currDestinationId }
+    });
+
+    addTripDetailsEventListener(); //turns on tap for trip details
+>>>>>>> 136506f1201f44c590d85c66f47afc0785c918ed
   });
 
   //used for the long tap to add to the custom wishlist
   $(".heart-unfilled").on("taphold", function(event){
+    $destinationMainPage.off("tap"); 
     $(".heart-unfilled").off("tap"); //the tap functionality was being called after taphold was called
     longTap(event);
     turnOn(); //turns back on 
+    addTripDetailsEventListener(); //turns on tap for trip details
   });
 
 }
