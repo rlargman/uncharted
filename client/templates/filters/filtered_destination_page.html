@@ -2,7 +2,11 @@
   <div 
     class="destination-main-page" 
     style="background-image: url(/{{ imageSrc }})">
-    <div class="destination-main-name">{{name}}</div>
+    {{> menu }}
+    <div class="destination-main-name">
+      <img class="menu-icon" src="/white-menu.png" />
+      {{name}}
+    </div>
     <img class="heart-unfilled" src="/heart_unfilled.png" />
   </div>
 </template>

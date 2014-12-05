@@ -1,0 +1,29 @@
+/* Styles associated with the menu */
+
+.menu-wrapper {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  padding: 10px;
+}
+
+.nav-icon {
+  height: 250px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-section {
+  border-top: 1px solid white;
+  color: white;
+  padding-bottom: 25px;
+}
+
+.first-nav {
+  margin-top: 100px;
+}
+
+.invisible {
+  display: none;
+}
