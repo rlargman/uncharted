@@ -1,64 +1,67 @@
 
 @import "globals";
 
-.individual-list{
-	width: 100%; 
-  	height: 100%;
-  	background-size: 100% 100%;
+.individual-list {
+  background-size: 100% 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-shadow: none;
+}
 
-  	background-color: #808080;
-  	
-  	padding-bottom: 5px;
-  	position: relative;
+.individual-list:after {
+  background-size: 100%;
+  content: "";
+  background-image: url('mtn-nologo.jpg');
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;    
 }
 
 .list-header {
-  	color: $PINK;
-  	font-family: 'Amatic SC', cursive;
-  	font-size: 40pt;
-
-  	border-bottom: 2px solid $PINK;
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+  line-height: 100px;
+  color: $PINK;
+  border-bottom: 1px solid $PINK;
 }
 
 .list-back-button{
-	height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   float: left;
-  top:0px;
-  left: 0px;
-  padding-left: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
-.list-name {
-  margin-right:25%; 
-  margin-left:25%;
-  font-size: 100pt;
 
+.list-name {
+  margin-right: auto; 
+  margin-left: auto;
 }
 
 /*styling for the entry template on the individual listpage*/
 
 .list-destination {
-  	padding: 20px 20px 20px 20px;
-  	border-bottom: 1px solid white;
-    background-color: #808080;
+	padding: 20px 20px 20px 20px;
+	border-bottom: 1px solid white;
 }
 
 
 .list-destination-image {
 	width: 100%;
-  	height: 200px;
+  height: 400px;
 }
 
 .list-destination-name {
-	  font-family: 'Amatic SC';
-	  font-weight: bold;
-	  font-size: 75pt;
-    text-align: left;
-	  color: $PINK;	
+  font-family: 'Amatic SC';
+  font-size: 75pt;
+  text-align: left;
+  color: $PINK;	
 }
 
 .list-destiantion-description {
 	text-align: left;
   color: white;
-
 }
