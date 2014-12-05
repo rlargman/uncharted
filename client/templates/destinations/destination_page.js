@@ -123,7 +123,7 @@ Template.destinationPage.rendered = function() {
 
 }
 
-function showOrHideMenu() {
+function toggleMenu() {
   var $menu = $('.menu-wrapper');
   $menu.toggleClass('invisible');
 }
@@ -139,17 +139,9 @@ Template.destinationPage.events({
 
     var $destinationMainPage =  $('.destination-main-page');
     $destinationMainPage.off("tap");
-    showOrHideMenu();
+    toggleMenu();
     addTripDetailsEventListener();
-  },
+  }
 
-  /*'click #explore-destinations': function(e, template) {
-    e.preventDefault();
-
-    Router.go('/destinations');
-    var $destinationMainPage =  $('.destination-main-page');
-    $destinationMainPage.off("tap");
-    Router.go('/destinations');
-  }*/
 });
 

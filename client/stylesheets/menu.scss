@@ -5,6 +5,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   padding: 10px;
+  z-index: 1;
 }
 
 .nav-icon {
@@ -26,4 +27,12 @@
 
 .invisible {
   display: none;
+}
+
+.static-menu {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px;
 }
