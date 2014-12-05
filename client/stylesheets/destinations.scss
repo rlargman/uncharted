@@ -32,3 +32,25 @@
   float: left;
   padding: 10px;
 }
+
+.heart-unfilled {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 5px;
+  background: rgb(255, 255, 255); /* fallback color */
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.heart-filled {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 5px;
+  background: rgb(255, 255, 255); /* fallback color */
+  background: rgba(255, 255, 255, 0.5);
+}

@@ -52,21 +52,38 @@ var goToDestination = function(event, direction) {
 
 
 /*
-*Functionality to do stuff for the ShortPress functionality for the Wishlist
-*/
+ * Functionality to do stuff for the ShortPress functionality for the Wishlist
+ */
 var shortTap = function(event) {
-
+  event.preventDefault();
   console.log("short tap");  
 
+  var heart = $('#heart');
+
+  if (heart.hasClass('heart-unfilled')) {
+    var currDestinationId = Session.get('currId');
+
+    Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {        // adds the current destination to the default wishlist's destinations
+      $addToSet: { destinations: currDestinationId }
+    });
+    
+    Destinations.update( { _id: currDestinationId }, {                                 // updates property to show that destination is added to a wishlist
+      $set: { addedToWishlist: true }
+    });
+
+    $('#heart-div').html('<img id="heart" class="heart-filled" src="/heart.png" />');  // makes heart filled
+  }
 }
 
+
 /*
-*Function to do stuff for the Long press functionality for the Wishlist
-*/
+ * Function to do stuff for the Long press functionality for the Wishlist
+ */
 
 var longTap = function(event) {
-  $('.destination-main-page').fadeTo(100,.5);
   console.log("long tap");
+  $('.destination-main-page').fadeTo(100,.5);
+  Router.go('/add_to_wishlists');
 }
 
 
@@ -75,7 +92,7 @@ var longTap = function(event) {
 * Needed because event listener had to be turned off for long press
 */
 var turnOn = function() {
-  $(".heart-unfilled").on("tap", function(event){
+  $(".heart-unfilled").on("tap", function(event) {
     shortTap(event);
   });
 }
@@ -110,6 +127,10 @@ Template.destinationPage.rendered = function() {
   addTripDetailsEventListener();
   
   // used for the short tap to add to the default wishlist
+<<<<<<< HEAD
+  $("#heart").on("tap", function(event) {
+    shortTap(event);
+=======
   $(".heart-unfilled").on("tap", function(event) {
     $destinationMainPage.off("tap"); 
     shortTap(event);
@@ -121,6 +142,7 @@ Template.destinationPage.rendered = function() {
     });
 
     addTripDetailsEventListener(); //turns on tap for trip details
+>>>>>>> 136506f1201f44c590d85c66f47afc0785c918ed
   });
 
   //used for the long tap to add to the custom wishlist

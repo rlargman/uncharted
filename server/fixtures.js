@@ -10,6 +10,7 @@ var fixture_destinations = [
     lodging: "Hostal Loja",
     imageSrc: "destinations/galapagos.jpeg",
     listImageSrc: "destinations/galapagos-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -42,6 +43,7 @@ var fixture_destinations = [
     lodging: "Cabana Copa Hostel",
     imageSrc: "destinations/rio.jpeg",
     listImageSrc: "destinations/rio-list.jpeg",
+    addedToWishlist: false,
 
 
     activities: [
@@ -75,6 +77,7 @@ var fixture_destinations = [
     lodging: "Hola Hostel",
     imageSrc: "destinations/barcelona.jpeg",
     listImageSrc: "destinations/barcelona-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -107,6 +110,7 @@ var fixture_destinations = [
     lodging: "Hotel Benvenuti",
     imageSrc: "destinations/florence.jpg",
     listImageSrc: "destinations/florence-list.jpg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -139,6 +143,7 @@ var fixture_destinations = [
     lodging: "Apple Hostel",
     imageSrc: "destinations/hongkong.jpeg",
     listImageSrc: "destinations/hongkong-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -171,6 +176,7 @@ var fixture_destinations = [
     lodging: "Pineapple Guesthouse",
     imageSrc: "destinations/phuket.jpeg",
     listImageSrc: "destinations/phuket-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -203,6 +209,7 @@ var fixture_destinations = [
     lodging: "Kings Cross Backpackers",
     imageSrc: "destinations/sydney.jpeg",
     listImageSrc: "destinations/sydney-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -234,6 +241,7 @@ var fixture_destinations = [
     lodging: "Lodge in the City",
     imageSrc: "destinations/auckland.jpeg",
     listImageSrc: "destinations/auckland-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -266,6 +274,7 @@ var fixture_destinations = [
     lodging: "Kauaii Beach House",
     imageSrc: "destinations/Kauai.jpeg",
     listImageSrc: "destinations/Kauai-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -298,6 +307,7 @@ var fixture_destinations = [
     lodging: "Orange Village Hostel",
     imageSrc: "destinations/sf.jpeg",
     listImageSrc: "destinations/sf-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -330,6 +340,7 @@ var fixture_destinations = [
     lodging: "Zebra Crossing",
     imageSrc: "destinations/capetown.jpeg",
     listImageSrc: "destinations/capetown-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
@@ -362,6 +373,7 @@ var fixture_destinations = [
     lodging: "Family Palace, Downtown Cairo",
     imageSrc: "destinations/cairo.jpeg",
     listImageSrc: "destinations/cairo-list.jpeg",
+    addedToWishlist: false,
 
     activities: [
       {
