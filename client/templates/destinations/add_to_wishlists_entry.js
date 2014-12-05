@@ -22,7 +22,10 @@ Template.addToWishlistsEntry.rendered = function() {
     	Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {
      		$push: { destinations: currDestinationId }
     	});
-    	console.log('done.');
+    	
+    	Destinations.update( { _id: currDestinationId }, {                                 // updates property to show that destination is added to a wishlist
+      		$set: { addedToWishlist: true }
+    	});
 
 		// route back to the current destination main page
 		Router.go('/destinations/' + currDestinationId);

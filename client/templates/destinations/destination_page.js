@@ -70,8 +70,6 @@ var shortTap = function(event) {
     Destinations.update( { _id: currDestinationId }, {                                 // updates property to show that destination is added to a wishlist
       $set: { addedToWishlist: true }
     });
-
-    $('#heart-div').html('<img id="heart" class="heart-filled" src="/heart.png" />');  // makes heart filled
   }
 }
 
