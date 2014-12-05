@@ -336,7 +336,7 @@ var fixture_destinations = [
     index: 10,
     name: "Cape Town",
     continent: "Africa",
-    description: "The city is famous for its harbour and landmarks such as Cape Point. Named one of the best places to visit by the New York Times",
+    description: "The city is famous for its harbour and landmarks such as Cape Point.",
     lodging: "Zebra Crossing",
     imageSrc: "destinations/capetown.jpeg",
     listImageSrc: "destinations/capetown-list.jpeg",
@@ -390,7 +390,7 @@ var fixture_destinations = [
       },
       {
         name: "Islamic Cairo",
-        description: "Visiting the Islamic Ciaro is stepping into a cultural wonderland that takes you back in time. ",
+        description: "Visiting the Islamic Ciaro is stepping into a cultural wonderland that takes you back in time.",
         imageSrc: "destinations/islamicCairo.jpg",
         category: "neighborhood"
       }
@@ -402,7 +402,7 @@ var fixture_destinations = [
     index: 12,
     name: "Swiss Alps",
     continent: "Europe",
-    description: "Explore epic mountain scenery in the heart of Europe",
+    description: "Explore epic mountain scenery in the heart of Europe.",
     lodging: "Funny Farm",
     imageSrc: "destinations/swissalps.jpeg",
     listImageSrc: "destinations/swissalps-list.jpeg",
@@ -411,19 +411,19 @@ var fixture_destinations = [
     activities: [
       {
         name: "Rhine Falls",
-        description: "Visit Europe’s largest waterfalls, at 150m wide Rhine Falls are magnificent",
+        description: "Visit Europe’s largest waterfalls, at 150m wide Rhine Falls are magnificent.",
         imageSrc: "destinations/rhinefalls.jpg",
         category: "landmark"
       },
       {
         name: "Hike in Grindelwald",
-        description: "Take a gondola from Grindelwald up to great day hikes around peaks Pfingstegg and First",
+        description: "Take a gondola from Grindelwald up to great day hikes around peaks Pfingstegg and First.",
         imageSrc: "destinations/grindelwald.jpg",
         category: "outdoors"
       },
       {
         name: "Paraglide in Interlaken",
-        description: "Looking for a little adventure? Paraglide through in Interlaken to get the best views of the peaks",
+        description: "Looking for a little adventure? Paraglide through in Interlaken to get the best views of the peaks.",
         imageSrc: "destinations/paraglideinterlaken.jpg",
         category: "outdoors"
       }
@@ -435,7 +435,7 @@ var fixture_destinations = [
     index: 13,
     name: "Iceland",
     continent: "Europe",
-    description: "From fjords to faults, Iceland is Europe's most unique destination",
+    description: "From fjords to faults, Iceland is Europe's most unique destination.",
     lodging: "Loft Hostel",
     imageSrc: "destinations/iceland.jpeg",
     listImageSrc: "destinations/iceland-list.jpeg",
@@ -444,13 +444,13 @@ var fixture_destinations = [
     activities: [
       {
         name: "Blue Lagoon",
-        description: "In southwesten Iceland, the Blue Lagoon is a natural geothermal spa",
+        description: "In southwesten Iceland, the Blue Lagoon is a natural geothermal spa.",
         imageSrc: "destinations/bluelagoon.jpg",
         category: "landmark"
       },
       {
         name: "Hits the bars in Reykjavik",
-        description: "Reykjavik is colorful in more ways than one",
+        description: "Reykjavik is colorful in more ways than one.",
         imageSrc: "destinations/reykjavik.jpg",
         category: "drink"
       },
