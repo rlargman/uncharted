@@ -105,6 +105,7 @@ Template.destinationPage.rendered = function() {
   
   // used for the short tap to add to the default wishlist
   $(".heart-unfilled").on("tap", function(event) {
+    $destinationMainPage.off("tap"); 
     shortTap(event);
     var currDestinationId = Session.get('currId');
     
@@ -112,13 +113,17 @@ Template.destinationPage.rendered = function() {
     Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {
       $addToSet: { destinations: currDestinationId }
     });
+
+    addTripDetailsEventListener(); //turns on tap for trip details
   });
 
   //used for the long tap to add to the custom wishlist
   $(".heart-unfilled").on("taphold", function(event){
+    $destinationMainPage.off("tap"); 
     $(".heart-unfilled").off("tap"); //the tap functionality was being called after taphold was called
     longTap(event);
     turnOn(); //turns back on 
+    addTripDetailsEventListener(); //turns on tap for trip details
   });
 
 }
