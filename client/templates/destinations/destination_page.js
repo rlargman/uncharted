@@ -150,25 +150,9 @@ Template.destinationPage.rendered = function() {
   });
 }
 
-function toggleMenu() {
-  var $menu = $('.menu-wrapper');
-  $menu.toggleClass('invisible');
-}
-
 Template.destinationPage.events ({
-
   'tap .heart-unfilled' : function(e, template) {
     console.log("short tap");
-  },
-
-  'click .menu-icon': function(e, template) {
-    e.preventDefault();
-
-    var $destinationMainPage =  $('.destination-main-page');
-    $destinationMainPage.off("tap");
-    toggleMenu();
-    addTripDetailsEventListener();
   }
-
 });
 

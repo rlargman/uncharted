@@ -4,7 +4,11 @@ Template.tripDetailsPage.events({
     e.preventDefault();
     
     var destination = template.data;
-    Router.go('/destinations/' + destination._id);
+    if (Session.get('currentlyFiltering')) {
+      Router.go('/filters/destinations/' + destination._id);
+    } else {
+      Router.go('/destinations/' + destination._id);
+    }
   }
 });
 
