@@ -15,9 +15,16 @@ var NEXT = 1;
  * @return - destination being retrieved
  */
 var retrieveDestination = function(currIndex, sort) {
-return Destinations.find({index: {$gt: currIndex, $lte: currIndex + 1}}, { 
-      sort: {_id: sort},
-  }).fetch()[0];
+  var count = Destinations.find().count();
+  var next;
+  if (currIndex==count && sort==1){
+    next=0;
+  } else if (currIndex==0 && sort==-1){
+    next=count
+  } else {
+    next = currIndex+sort;
+  }
+  return Destinations.find({index: next}).fetch()[0];
 }
 
 /** 
