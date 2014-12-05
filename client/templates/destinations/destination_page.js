@@ -109,6 +109,8 @@ function addTripDetailsEventListener() {
 }
 
 Template.destinationPage.rendered = function() {
+  $(".menu-icon").css("display","inline");
+  $(".static-menu").css("display","inline");
   var $destinationMainPage =  $('.destination-main-page');
 
   $destinationMainPage.on("swipeleft", function(event) {
