@@ -45,21 +45,38 @@ var goToDestination = function(event, direction) {
 
 
 /*
-*Functionality to do stuff for the ShortPress functionality for the Wishlist
-*/
+ * Functionality to do stuff for the ShortPress functionality for the Wishlist
+ */
 var shortTap = function(event) {
-
+  event.preventDefault();
   console.log("short tap");  
 
+  var heart = $('#heart');
+
+  if (heart.hasClass('heart-unfilled')) {
+    var currDestinationId = Session.get('currId');
+
+    Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {        // adds the current destination to the default wishlist's destinations
+      $addToSet: { destinations: currDestinationId }
+    });
+    
+    Destinations.update( { _id: currDestinationId }, {                                 // updates property to show that destination is added to a wishlist
+      $set: { addedToWishlist: true }
+    });
+
+    $('#heart-div').html('<img id="heart" class="heart-filled" src="/heart.png" />');  // makes heart filled
+  }
 }
 
+
 /*
-*Function to do stuff for the Long press functionality for the Wishlist
-*/
+ * Function to do stuff for the Long press functionality for the Wishlist
+ */
 
 var longTap = function(event) {
-  $('.destination-main-page').fadeTo(100,.5);
   console.log("long tap");
+  $('.destination-main-page').fadeTo(100,.5);
+  Router.go('/add_to_wishlists');
 }
 
 
@@ -68,7 +85,7 @@ var longTap = function(event) {
 * Needed because event listener had to be turned off for long press
 */
 var turnOn = function() {
-  $(".heart-unfilled").on("tap", function(event){
+  $(".heart-unfilled").on("tap", function(event) {
     console.log("short press re-enabled")
     shortTap(event);
   });
@@ -104,14 +121,8 @@ Template.destinationPage.rendered = function() {
   addTripDetailsEventListener();
   
   // used for the short tap to add to the default wishlist
-  $(".heart-unfilled").on("tap", function(event) {
+  $("#heart").on("tap", function(event) {
     shortTap(event);
-    var currDestinationId = Session.get('currId');
-    
-    // adds the current destination to the default wish list's destinations
-    Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {
-      $addToSet: { destinations: currDestinationId }
-    });
   });
 
   //used for the long tap to add to the custom wishlist

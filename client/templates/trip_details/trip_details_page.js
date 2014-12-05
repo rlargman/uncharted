@@ -8,7 +8,8 @@ Template.tripDetailsPage.events({
   }
 });
 
-Template.tripDetailsPage.rendered=function(){
+
+Template.tripDetailsPage.rendered = function() {
 
 
 	var currDestination = Session.get("destination");
@@ -51,5 +52,32 @@ Template.tripDetailsPage.rendered=function(){
 
     myStyleSheet.insertRule(rule, 10);	
 
+  // used for the short tap to add to the default wishlist
+  $("#heart").on("tap", function(event) {
+    shortTap(event);
+  });
+}
 
+/*
+ * Functionality to do stuff for the ShortPress functionality for the Wishlist
+ */
+var shortTap = function(event) {
+  event.preventDefault();
+  console.log("short tap");  
+
+  var heart = $('#heart');
+
+  if (heart.hasClass('trip-details-heart-unfilled')) {
+    var currDestinationId = Session.get('currId');
+
+    Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {                     // adds the current destination to the default wishlist's destinations
+      $addToSet: { destinations: currDestinationId }
+    });
+    
+    Destinations.update( { _id: currDestinationId }, {                                              // updates property to show that destination is added to a wishlist
+      $set: { addedToWishlist: true }
+    });
+
+    $('#heart-div').html('<img id="heart" class="trip-details-heart-filled" src="/heart.png" />');  // makes heart filled
+  }
 }

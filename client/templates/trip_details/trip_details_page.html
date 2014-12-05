@@ -1,7 +1,13 @@
 <template name="tripDetailsPage">
   <div class="trip-details-page" >
     <div class="trip-details-header clearfix">
-      <img class="trip-details-heart-unfilled" src="/white-heart.png" />
+
+      {{ #if addedToWishlist }}
+        <img id="heart" class="trip-details-heart-filled" src="/heart.png" />
+      {{ else }}
+        <img id="heart" class="trip-details-heart-unfilled" src="/heart_unfilled.png" />
+      {{ /if }}
+
     </div>
 
     <div class="destination-name">{{name}}</div>
