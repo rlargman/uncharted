@@ -4,7 +4,7 @@ Template.addToWishlistsEntry.helpers ({
 		firstDestinationId = currWishlistDestinations[0];
 		firstDestination = Destinations.findOne(firstDestinationId);
 
-		return firstDestination.imageSrc;
+		return firstDestination.listImageSrc;
 	}	
 });
 
