@@ -2,13 +2,15 @@
   
   	{{#if destinations}}
     	<div class="add-to-wishlists-entry">
-			<img class="first-destination-image" src="/{{listImageSrc}}" />
-			<div class="add-to-wishlists-wishlist-name">{{name}}</div>
+			 <img class="first-destination-image" src="/{{ firstDestinationImgSrc }}" />
+			 <div class="add-to-wishlists-wishlist-name">{{name}}</div>
   		</div>
-    {{else }}
-    	<div class="no-img-background">
-			<div class="add-to-wishlists-wishlist-name">{{name}}</div>
-  		</div>
+    {{else }}	
+      <div class="add-to-wishlists-entry">
+          <div class="no-img-background">
+            <div class="add-to-wishlists-wishlist-name">{{name}}</div>
+  		    </div>
+      </div>
    	{{/if}}
 
 </template>

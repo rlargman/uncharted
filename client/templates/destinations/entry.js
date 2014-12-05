@@ -1,29 +1,35 @@
-Template.addToWishlistsEntry.helpers = {
- checkForBackgroundImage: function() {
-	var currWishlistDestinations = this.destinations;
+Template.addToWishlistsEntry.helpers ({
+	firstDestinationImgSrc:  function() {
+		currWishlistDestinations = this.destinations;
+		firstDestinationId = currWishlistDestinations[0];
+		firstDestination = Destinations.findOne(firstDestinationId);
 
-	console.log(this);
-
-	if (currWishlistDestinations.length === 0) {
-		// remove img element
-		$('.first-destination-image').remove();                     
-
-		// add translucent background css class to entry div
-		$('.add-to-wishlists-entry').addClass('no-img-background');
-	}
-}
-	
-}
-
-Template.addToWishlistsPage.rendered = function() {
-
-	
-}
-
+		return firstDestination.imageSrc;
+	}	
+});
 
 // use this to add event handlers for the wish list buttons
-// Template.addToWishlistsPage.events = {
-// 	function(template, e) {
-// 		template.data 
-// 	}
-// }
+Template.addToWishlistsPage.events ({
+	'click .add-to-wishlists-entry': function(e, template) {
+		e.preventDefault();
+
+		var currWishlist = this;
+		var currDestinationId = Session.get('currId');
+		console.log(currWishlist);
+		console.log(currWishlist._id);
+
+		// update the wishlist object's destination array with this id
+		// adds the current destination to the default wish list's destinations
+    	// Wishlists.update( {_id: currWishlist._id }, {
+     //  		$addToSet: { destinations: currDestinationId }
+    	// });
+    	Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {
+     		$addToSet: { destinations: currDestinationId }
+    	});
+
+
+		// route back to the current destination main page
+
+		// Router.go('/filters/North America');
+	}
+});
