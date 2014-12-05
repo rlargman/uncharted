@@ -396,6 +396,40 @@ var fixture_destinations = [
       }
     ]
   },
+
+// destination 13
+  { 
+    index: 12,
+    name: "Swiss Alps",
+    continent: "Europe",
+    description: "Explore epic mountain scenery in the heart of Europe",
+    lodging: "Funny Farm",
+    imageSrc: "destinations/swissalps.jpeg",
+    listImageSrc: "destinations/swissalps-list.jpeg",
+    addedToWishlist: false,
+
+    activities: [
+      {
+        name: "Rhine Falls",
+        description: "Visit Europe’s largest waterfalls, at 150m wide Rhine Falls are magnificent",
+        imageSrc: "destinations/rhinefalls.jpg",
+        category: "landmark"
+      },
+      {
+        name: "Hike in Grindelwald",
+description: "Take a gondola from Grindelwald up to great day hikes around peaks Pfingstegg and First”
+        imageSrc: "destinations/grindelwald.jpg",
+        category: "outdoors"
+      },
+      {
+        name: "Paraglide in Interlaken",
+        description: "Looking for a little adventure? Paraglide through in Interlaken to get the best views of ",
+        imageSrc: "destinations/paraglideinterlaken.jpg",
+        category: "outdoors"
+      }
+    ]
+  },
+
 // end
 ];
 
