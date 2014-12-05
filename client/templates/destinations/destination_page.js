@@ -127,10 +127,10 @@ Template.destinationPage.rendered = function() {
   addTripDetailsEventListener();
   
   // used for the short tap to add to the default wishlist
-<<<<<<< HEAD
   $("#heart").on("tap", function(event) {
     shortTap(event);
-=======
+  });
+
   $(".heart-unfilled").on("tap", function(event) {
     $destinationMainPage.off("tap"); 
     shortTap(event);
@@ -142,18 +142,16 @@ Template.destinationPage.rendered = function() {
     });
 
     addTripDetailsEventListener(); //turns on tap for trip details
->>>>>>> 136506f1201f44c590d85c66f47afc0785c918ed
   });
 
   //used for the long tap to add to the custom wishlist
-  $(".heart-unfilled").on("taphold", function(event){
+  $(".heart-unfilled").on("taphold", function(event) {
     $destinationMainPage.off("tap"); 
     $(".heart-unfilled").off("tap"); //the tap functionality was being called after taphold was called
     longTap(event);
     turnOn(); //turns back on 
     addTripDetailsEventListener(); //turns on tap for trip details
   });
-
 }
 
 function toggleMenu() {
@@ -161,9 +159,9 @@ function toggleMenu() {
   $menu.toggleClass('invisible');
 }
 
-Template.destinationPage.events({
+Template.destinationPage.events ({
 
-  'tap .heart-unfilled' : function(e, template){
+  'tap .heart-unfilled' : function(e, template) {
     console.log("short tap");
   },
 
