@@ -2,6 +2,13 @@
 var PREVIOUS = -1;
 var NEXT = 1;
 
+Tracker.autorun(function () {
+  var destination = Session.get('destination');
+  if (Session.get('swiping')) {
+    setTimeout(function() { Session.set('swiping', false); }, 1000); 
+  }
+});
+
 /** 
  * Retrieves a single destination from the database that is either the next or
  * the previous destination from the current one.
@@ -46,6 +53,7 @@ var goToDestination = function(event, direction) {
     otherDestination = Destinations.findOne();
   }
   
+  Session.set('swiping', true);
   Session.set('destination', otherDestination);
   Router.go('/destinations/' + otherDestination._id);  
 }
@@ -61,6 +69,7 @@ var shortTap = function(event) {
   var heart = $('#heart');
 
   if (heart.hasClass('heart-unfilled')) {
+    Session.set('currId', Session.get('destination')._id);   
     var currDestinationId = Session.get('currId');
 
     Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {        // adds the current destination to the default wishlist's destinations
@@ -95,64 +104,107 @@ var turnOn = function() {
   });
 }
 
-/*
- * Adds the tap event listener to the page and redirects to trip details
- */
-function addTripDetailsEventListener() {
-  var $destinationMainPage =  $('.destination-main-page');  
-  $destinationMainPage.on("tap", function(event) {
-    event.preventDefault();
-    
-    var destination = Session.get('destination');
-    Router.go('/destinations/details/' + destination._id);
-  });
-}
-
 Template.destinationPage.rendered = function() {
-  var $destinationMainPage =  $('.destination-main-page');
-
-  $destinationMainPage.on("swipeleft", function(event) {
-    $destinationMainPage.off("tap"); 
+  console.log("hello");
+  Session.set('swiping', false);
+  $('.destination-main-page').on("swipeleft", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
     goToDestination(event, PREVIOUS);
-    addTripDetailsEventListener();
   });
-  $destinationMainPage.on("swiperight", function(event) {
-    $destinationMainPage.off("tap");     
+
+  $('.destination-main-page').on("swiperight", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
     goToDestination(event, NEXT);
-    addTripDetailsEventListener();
   }); 
 
-  addTripDetailsEventListener();
-  
+  // SHORT TAP
   // used for the short tap to add to the default wishlist
-  $("#heart").on("tap", function(event) {
-    var destination = Session.get('destination');
-    console.log(Session.get('destination'));
-    Session.set('currId', destination[0]._id);   
+  $(".destination-main-page").on("tap", function(event) {
+    event.preventDefault();
+    var target = event.target;
 
-    $destinationMainPage.off("tap"); 
-    shortTap(event);
-    addTripDetailsEventListener();
+    if (target.id === 'heart') {
+      console.log(Session.get('destination'));
+      Session.set('currId', Session.get('destination')._id);   
+      shortTap(event);
+    } else if (!Session.get('swiping')) {
+      var destination = Session.get('destination');
+      Router.go('/destinations/details/' + destination._id);
+    }
   });
 
-
+  // LONG TAP
   //used for the long tap to add to the custom wishlist
-  $(".heart-unfilled").on("taphold", function(event) {
-    var destination = Session.get('destination');
-    console.log(Session.get('destination'));
-    Session.set('currId', Session.get('destination')._id);
+  $(".destination-main-page").on("taphold", function(event) {
+    event.preventDefault();
+    var target = event.target;
+    event.stopPropagation();
+    if (target.id == 'heart') {
+      Session.set('currId', Session.get('destination')._id);
 
-    $destinationMainPage.off("tap"); 
-    $(".heart-unfilled").off("tap"); //the tap functionality was being called after taphold was called
-    longTap(event);
-    turnOn(); //turns back on 
-    addTripDetailsEventListener(); //turns on tap for trip details
+    // $(".heart-unfilled").off("tap"); //the tap functionality was being called after taphold was called
+      longTap(event);
+      //turnOn(); //turns back on
+    } 
   });
 }
 
 Template.destinationPage.events ({
-  'tap .heart-unfilled' : function(e, template) {
-    console.log("short tap");
-  }
+
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /*
+//  * Adds the tap event listener to the page and redirects to trip details
+//  */
+// function addTripDetailsEventListener() {
+//   //var $destinationMainPage =  $('.destination-main-page');  
+//   $destinationMainPage.on("tap", function(event) {
+//     event.preventDefault();
+    
+//     var destination = Session.get('destination');
+//     Router.go('/destinations/details/' + destination._id);
+//   });
+// }
