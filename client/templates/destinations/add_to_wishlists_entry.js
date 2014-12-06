@@ -1,6 +1,6 @@
 Template.addToWishlistsEntry.helpers ({
   hasDestinations: function() {
-    return this.destinations.length > 0
+    return this.destinations.length > 0;
   },
 
 	firstDestinationImgSrc:  function() {
@@ -9,36 +9,36 @@ Template.addToWishlistsEntry.helpers ({
 		firstDestination = Destinations.findOne(firstDestinationId);
 
 		return firstDestination.listImageSrc;
-	}	
+	},
 });
 
 Template.addToWishlistsEntry.rendered = function() {
-	$(".add-to-wishlists-entry").on("tap", function(event) {
-    	event.preventDefault();
 
-		var currDestinationId = Session.get('currId');
- 		console.log('wishlist id from mongo findOne: ' + Wishlists.findOne({default_list: true})['_id']);
-
-		// adds the current destination to the default wish list's destinations
-    	// Wishlists.update( {_id: currWishlist._id }, {
-     //  		$addToSet: { destinations: currDestinationId }
-    	// });
-    	Wishlists.update( {_id: Wishlists.findOne({default_list: true})['_id'] }, {
-     		$push: { destinations: currDestinationId }
-    	});
-    	
-    	Destinations.update( { _id: currDestinationId }, {                                 // updates property to show that destination is added to a wishlist
-      		$set: { addedToWishlist: true }
-    	});
-    var $menu_button = $('.static-menu');
-    $menu_button.toggleClass('invisible');
-
-		// route back to the current destination main page
-		Router.go('/destinations/' + currDestinationId);
-    });
+  var $menu_button = $('.static-menu');
+  $menu_button.toggleClass('invisible');
 }
 
+Template.addToWishlistsEntry.events ({
+  'click .add-to-wishlists-entry': function(e, template) {
+    e.preventDefault();
 
+    var currDestinationId = Session.get('currId');
+    var currWishlist = this;
+        
+    // adds the current destination to the default wish list's destinations
+    Wishlists.update( {_id: currWishlist._id }, {
+      $addToSet: { destinations: currDestinationId }
+    });
+      
+    Destinations.update( { _id: currDestinationId }, {                                 // updates property to show that destination is added to a wishlist
+      $set: { addedToWishlist: true }
+    });
+
+    // route back to the current destination main page
+    Router.go('/destinations/' + currDestinationId);
+  }
+
+});
 
 
 
