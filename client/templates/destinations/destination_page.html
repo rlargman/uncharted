@@ -2,19 +2,20 @@
 	<div 
 	class="destination-main-page" 
 	style="background-image: url(/{{ imageSrc }})">
-	<div class="destination-main-name">
-		{{name}}
-	</div>
+	
+		<div class="destination-main-name">
+			{{name}}
+		</div>
 
-	<div id="heart-div">
+		<!-- <div id="heart-div"> -->
 		{{ #if addedToWishlist }}
 			<img id="heart" class="heart-filled" src="/heart.png" />
 		{{ else }}
 			<img id="heart" class="heart-unfilled" src="/pink-heart.png" />
 		{{ /if }}
+		<!-- </div> -->
 	</div>
 
-</div>
 </template>
 
 

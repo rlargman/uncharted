@@ -1,0 +1,24 @@
+<template name="filtersTripDetailsPage">
+  <div class="trip-details-page" >
+    <div class="trip-details-header clearfix">
+
+      {{ #if addedToWishlist }}
+        <img id="heart" class="trip-details-heart-filled" src="/heart.png" />
+      {{ else }}
+        <img id="heart" class="trip-details-heart-unfilled" src="/heart_unfilled.png" />
+      {{ /if }}
+
+    </div>
+
+    <div class="destination-name">{{name}}</div>
+    <div class="destination-description">{{description}}</div>
+    <div class="trip-details-housing clearfix">
+      <img class="cards-icon housing-icon" src="/house.png" />
+      <span class="housing-text">{{lodging}}</span>
+    </div>
+
+    {{#each activities}}
+      {{> filterActivityCard}}
+    {{/each}}
+  </div>
+</template>

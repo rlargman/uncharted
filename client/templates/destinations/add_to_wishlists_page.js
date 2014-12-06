@@ -5,7 +5,8 @@ Template.addToWishlistsPage.helpers ({
 	}
 });
 
-Template.addToWishlistsPage.rendered = function() {
-  var $menu_button = $('.static-menu');
-  $menu_button.addClass('invisible');
+
+Template.addToWishlistsPage.rendered=function(){
+	$(".menu-icon").css("display","none");
+	$(".static-menu").css("display","none");
 }
