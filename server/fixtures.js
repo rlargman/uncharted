@@ -336,7 +336,7 @@ var fixture_destinations = [
     index: 10,
     name: "Cape Town",
     continent: "Africa",
-    description: "The city is famous for its harbour and landmarks such as Cape Point. Named one of the best places to visit by the New York Times",
+    description: "The city is famous for its harbour and landmarks such as Cape Point.",
     lodging: "Zebra Crossing",
     imageSrc: "destinations/capetown.jpeg",
     listImageSrc: "destinations/capetown-list.jpeg",
@@ -390,12 +390,112 @@ var fixture_destinations = [
       },
       {
         name: "Islamic Cairo",
-        description: "Visiting the Islamic Ciaro is stepping into a cultural wonderland that takes you back in time. ",
+        description: "Visiting the Islamic Ciaro is stepping into a cultural wonderland that takes you back in time.",
         imageSrc: "destinations/islamicCairo.jpg",
         category: "neighborhood"
       }
     ]
   },
+
+// destination 13
+  { 
+    index: 12,
+    name: "Swiss Alps",
+    continent: "Europe",
+    description: "Explore epic mountain scenery in the heart of Europe.",
+    lodging: "Funny Farm",
+    imageSrc: "destinations/swissalps.jpeg",
+    listImageSrc: "destinations/swissalps-list.jpeg",
+    addedToWishlist: false,
+
+    activities: [
+      {
+        name: "Rhine Falls",
+        description: "Visit Europe’s largest waterfalls, at 150m wide Rhine Falls are magnificent.",
+        imageSrc: "destinations/rhinefalls.jpg",
+        category: "landmark"
+      },
+      {
+        name: "Hike in Grindelwald",
+        description: "Take a gondola from Grindelwald up to great day hikes around peaks Pfingstegg and First.",
+        imageSrc: "destinations/grindelwald.jpg",
+        category: "outdoors"
+      },
+      {
+        name: "Paraglide in Interlaken",
+        description: "Looking for a little adventure? Paraglide through in Interlaken to get the best views of the peaks.",
+        imageSrc: "destinations/paraglideinterlaken.jpg",
+        category: "outdoors"
+      }
+    ]
+  },
+
+  // destination 14
+  { 
+    index: 13,
+    name: "Iceland",
+    continent: "Europe",
+    description: "From fjords to faults, Iceland is Europe's most unique destination.",
+    lodging: "Loft Hostel",
+    imageSrc: "destinations/iceland.jpeg",
+    listImageSrc: "destinations/iceland-list.jpeg",
+    addedToWishlist: false,
+
+    activities: [
+      {
+        name: "Blue Lagoon",
+        description: "In southwesten Iceland, the Blue Lagoon is a natural geothermal spa.",
+        imageSrc: "destinations/bluelagoon.jpg",
+        category: "landmark"
+      },
+      {
+        name: "Hits the bars in Reykjavik",
+        description: "Reykjavik is colorful in more ways than one.",
+        imageSrc: "destinations/reykjavik.jpg",
+        category: "drink"
+      },
+      {
+        name: "Breidavik Beach",
+        description: "A perfect, unspoiled beach in Iceland's northeast corner.",
+        imageSrc: "destinations/breidavik.jpg",
+        category: "outdoors"
+      }
+    ]
+  },
+
+ // destination 15
+  { 
+    index: 14,
+    name: "Montenegro",
+    continent: "Europe",
+    description: "From wild mountains to pristine beaches, Montenegro is postcard ready.",
+    lodging: "Vila Jadran",
+    imageSrc: "destinations/montenegro.jpeg",
+    listImageSrc: "destinations/montenegro-list.jpeg",
+    addedToWishlist: false,
+
+    activities: [
+      {
+        name: "See Budva's Charm",
+        description: "One of many beach towns, Budva epitomizes Montenegro's beauty.",
+        imageSrc: "destinations/budva.jpg",
+        category: "neighborhood"
+      },
+      {
+        name: "Stari Bar's Ruins",
+        description: "See stony ruins in the countryside",
+        imageSrc: "destinations/staribar.jpg",
+        category: "landmark"
+      },
+      {
+        name: "Durmitor Canyon",
+        description: "Montenegro isn't all sleepy beach towns, however. You can raft through the Durmitor canyon.",
+        imageSrc: "destinations/durmitor.jpg",
+        category: "outdoors"
+      }
+    ]
+  },
+
 // end
 ];
 

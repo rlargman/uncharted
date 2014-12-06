@@ -105,7 +105,8 @@ var turnOn = function() {
 }
 
 Template.destinationPage.rendered = function() {
-  console.log("hello");
+  $(".menu-icon").css("display","inline");
+  $(".static-menu").css("display","inline");
   Session.set('swiping', false);
   $('.destination-main-page').on("swipeleft", function(event) {
     event.preventDefault();
@@ -157,54 +158,3 @@ Template.destinationPage.events ({
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// /*
-//  * Adds the tap event listener to the page and redirects to trip details
-//  */
-// function addTripDetailsEventListener() {
-//   //var $destinationMainPage =  $('.destination-main-page');  
-//   $destinationMainPage.on("tap", function(event) {
-//     event.preventDefault();
-    
-//     var destination = Session.get('destination');
-//     Router.go('/destinations/details/' + destination._id);
-//   });
-// }
