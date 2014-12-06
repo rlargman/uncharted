@@ -510,10 +510,17 @@ if (Destinations.find().count() === 0) {
 
 // default wishlist
 var fixture_wishlist = { name: 'My Favorites (Default)', destinations: [], default_list: true };
+var one = {name: "Summer '15", destinations: [], default_list: false };
+var two = {name: "Someday", destinations: [], default_list: false };
+var three = {name: "Spring Break", destinations: [], default_list: false };
+
 
 // loads default wishlists to Wishlists collection
 if (Wishlists.find().count() === 0) {
   Wishlists.insert(fixture_wishlist);
+  Wishlists.insert(one);
+  Wishlists.insert(two);
+  Wishlists.insert(three);
 }
 
 
