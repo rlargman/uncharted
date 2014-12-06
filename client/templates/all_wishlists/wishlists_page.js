@@ -34,9 +34,5 @@ Template.wishlistsPage.helpers({
 Template.wishlistsPage.rendered=function(){
 	$(".menu-icon").css("display","inline");
 	$(".static-menu").css("display","inline");
-
-
-
-
 }
 

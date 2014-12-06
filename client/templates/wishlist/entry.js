@@ -21,10 +21,6 @@ Template.individualListPage.helpers({
 Template.individualListPage.rendered=function(){
 	$(".menu-icon").css("display","none");
 	$(".static-menu").css("display","none");
-
-
-
-
 }
 
 
