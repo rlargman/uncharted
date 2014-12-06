@@ -1,7 +1,12 @@
 <template name="wishlistsEntry">
   <div class="wishlists-entry">
   	<a href = "/wishlists/{{id}}">
-    	<img class="destination-image" src="/{{image}}" />
+  		{{#if image}}
+    		<img class="destination-image" src="/{{image}}" />
+    	{{else}}
+	    	<div class= "no-image-entry">
+	    	</div>
+    	{{/if}}
     	<div class="wishlist-name">{{name}}</div>
 	</a>
   </div>
